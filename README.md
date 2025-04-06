@@ -6,8 +6,8 @@ A data engineering project using **Alpha Vantage** APIs, **Airflow**, **Spark**,
 
 ## Final Dashboard
 
-- **Link**: [Metabase Dashboard](https://glorious-broccoli-x5pv7rg9gp4g3vxq4-3000.app.github.dev/public/dashboard/c0e448a2-17d9-475e-b92b-ab8a1d0c0de5)
-
+- **Link**: [Metabase Dashboard](https://glorious-broccoli-x5pv7rg9gp4g3vxq4-3000.app.github.dev/public/dashboard/c0e448a2-17d9-475e-b92b-ab8a1d0c0de5) The link only works when Metabase is actively running docker-compose up
+![Dashboard](./images/Metabase.png)
 ---
 
 ## 1. Problem Description
@@ -153,7 +153,7 @@ These read from final tables and produce **`final_table_stocks_clean`** / **`fin
 
 ---
 
-## 6. Viewing Dashboards (Metabase)
+## 6. Viewing Dashboard (Metabase)
 
 - **URL**: [http://localhost:3000](http://localhost:3000/)
 - Connect Metabase to BigQuery → see `final_table_stocks_clean` and `final_table_forex_clean`.
