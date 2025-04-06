@@ -1,0 +1,52 @@
+[2025-04-05T10:50:40.488+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: alpha_vantage_pipeline.analysis_task manual__2025-04-05T10:36:24.718160+00:00 [queued]>
+[2025-04-05T10:50:40.551+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: alpha_vantage_pipeline.analysis_task manual__2025-04-05T10:36:24.718160+00:00 [queued]>
+[2025-04-05T10:50:40.554+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-05T10:50:40.555+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2025-04-05T10:50:40.555+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-05T10:50:40.628+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): analysis_task> on 2025-04-05 10:36:24.718160+00:00
+[2025-04-05T10:50:40.669+0000] {standard_task_runner.py:55} INFO - Started process 176 to run task
+[2025-04-05T10:50:40.681+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'alpha_vantage_pipeline', 'analysis_task', 'manual__2025-04-05T10:36:24.718160+00:00', '--job-id', '101', '--raw', '--subdir', 'DAGS_FOLDER/alpha_vantage_pipeline.py', '--cfg-path', '/tmp/tmp5l1tm3eh']
+[2025-04-05T10:50:40.695+0000] {standard_task_runner.py:83} INFO - Job 101: Subtask analysis_task
+[2025-04-05T10:50:41.005+0000] {task_command.py:388} INFO - Running <TaskInstance: alpha_vantage_pipeline.analysis_task manual__2025-04-05T10:36:24.718160+00:00 [running]> on host e8ddbeabb1e5
+[2025-04-05T10:50:41.921+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=alpha_vantage_pipeline
+AIRFLOW_CTX_TASK_ID=analysis_task
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-05T10:36:24.718160+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-04-05T10:36:24.718160+00:00
+[2025-04-05T10:50:43.892+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/alpha_vantage_pipeline.py", line 45, in do_analysis
+    rows = bq_client.query(query).result()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/query.py", line 1499, in result
+    do_get_result()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 288, in retry_wrapped_func
+    on_error=on_error,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 190, in retry_target
+    return target()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/query.py", line 1489, in do_get_result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/base.py", line 728, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 137, in result
+    raise self._exception
+google.api_core.exceptions.BadRequest: 400 Invalid project ID 'your_project'. Project IDs must contain 6-63 lowercase letters, digits, or dashes. Some project IDs also include domain name separated by a colon. IDs must start with a letter and may not end with a dash.
+
+Location: US
+Job ID: 9d9d152d-7af8-4539-b8d1-f3c22d3b5fae
+
+[2025-04-05T10:50:43.956+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=alpha_vantage_pipeline, task_id=analysis_task, execution_date=20250405T103624, start_date=20250405T105040, end_date=20250405T105043
+[2025-04-05T10:50:44.063+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 101 for task analysis_task (400 Invalid project ID 'your_project'. Project IDs must contain 6-63 lowercase letters, digits, or dashes. Some project IDs also include domain name separated by a colon. IDs must start with a letter and may not end with a dash.
+
+Location: US
+Job ID: 9d9d152d-7af8-4539-b8d1-f3c22d3b5fae
+; 176)
+[2025-04-05T10:50:44.124+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2025-04-05T10:50:44.188+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,7 @@
+# Ignore environment variables
+.env
+
+# Ignore any JSON key files
+credentials/*.json
+
+docker/postgres-data/

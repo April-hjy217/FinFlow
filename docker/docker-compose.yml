@@ -1,0 +1,178 @@
+services:
+
+  # 1) postgres
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow"]
+      interval: 5s
+      retries: 5
+      start_period: 5s
+      timeout: 5s
+
+  # 2) pgAdmin
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    depends_on:
+      - postgres
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@demo.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - "5050:80"
+
+  # 3) airflow 
+  airflow:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile_airflow
+    image: my_airflow_custom
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__FERNET_KEY: "I2vUd19QhZTVclJyx8DKe/Uc9TOBdgT7HLL+JcV/0Ag="
+      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/credentials/key.json
+
+    command: bash -c "airflow db init && airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com"
+
+
+  # 4) Scheduler 
+  airflow-scheduler:
+    image: my_airflow_custom
+    depends_on:
+      - postgres
+      - airflow
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__FERNET_KEY: "I2vUd19QhZTVclJyx8DKe/Uc9TOBdgT7HLL+JcV/0Ag="
+      ALPHA_VANTAGE_API_KEY: "${ALPHA_VANTAGE_API_KEY}"
+      DATA_LAKE_BUCKET: "${DATA_LAKE_BUCKET}"
+      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/credentials/key.json
+      PYTHONPATH: "/opt/airflow"
+      GCP_PROJECT_ID: "${GCP_PROJECT_ID}"
+      GCP_DATASET_ID: "${GCP_DATASET_ID}"
+    command: >
+      bash -c "
+      exec airflow scheduler
+      "
+    volumes:
+      - ../dags:/opt/airflow/dags
+      - ../logs:/opt/airflow/logs
+      - ../scripts:/opt/airflow/scripts
+      - ../plugins:/opt/airflow/plugins
+      - ../credentials/key.json:/opt/airflow/credentials/key.json
+      - ../dbt:/opt/airflow/dbt
+
+  # 5) Webserver 
+  airflow-webserver:
+    image: my_airflow_custom
+    depends_on:
+      - postgres
+      - airflow
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__FERNET_KEY: "I2vUd19QhZTVclJyx8DKe/Uc9TOBdgT7HLL+JcV/0Ag="
+      ALPHA_VANTAGE_API_KEY: "${ALPHA_VANTAGE_API_KEY}"
+      DATA_LAKE_BUCKET: "${DATA_LAKE_BUCKET}"
+      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/credentials/key.json
+      PYTHONPATH: "/opt/airflow"
+      GCP_PROJECT_ID: "${GCP_PROJECT_ID}"
+      GCP_DATASET_ID: "${GCP_DATASET_ID}"
+    ports:
+      - "8080:8080"  
+    command: >
+      bash -c "
+      exec airflow webserver --port 8080
+      "
+    volumes:
+      - ../dags:/opt/airflow/dags
+      - ../logs:/opt/airflow/logs
+      - ../scripts:/opt/airflow/scripts
+      - ../plugins:/opt/airflow/plugins
+      - ../credentials/key.json:/opt/airflow/credentials/key.json
+      - ../dbt:/opt/airflow/dbt
+
+  # 6) Triggerer
+  airflow-triggerer:
+    image: my_airflow_custom
+    depends_on:
+      - postgres
+      - airflow
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__FERNET_KEY: "I2vUd19QhZTVclJyx8DKe/Uc9TOBdgT7HLL+JcV/0Ag="
+      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/credentials/key.json
+      ALPHA_VANTAGE_API_KEY: "${ALPHA_VANTAGE_API_KEY}"
+      DATA_LAKE_BUCKET: "${DATA_LAKE_BUCKET}"
+      PYTHONPATH: "/opt/airflow"
+      GCP_PROJECT_ID: "${GCP_PROJECT_ID}"
+      GCP_DATASET_ID: "${GCP_DATASET_ID}"     
+    command: >
+      bash -c "
+      exec airflow triggerer
+      "
+    volumes:
+      - ../dags:/opt/airflow/dags
+      - ../logs:/opt/airflow/logs
+      - ../scripts:/opt/airflow/scripts
+      - ../plugins:/opt/airflow/plugins
+      - ../credentials/key.json:/opt/airflow/credentials/key.json
+      - ../dbt:/opt/airflow/dbt
+
+
+  # 7) Spark Master
+  spark-master:
+    image: bitnami/spark:3.3.0
+    container_name: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_MASTER_PORT_NUMBER=7077
+      - SPARK_MASTER_WEBUI_PORT_NUMBER=8081
+    command: >
+      /opt/bitnami/spark/sbin/start-master.sh --port 7077 --webui-port 8081
+    ports:
+      - "7077:7077" 
+      - "8081:8081"  
+
+  # 8) Spark Worker
+  spark-worker:
+    image: bitnami/spark:3.3.0
+    container_name: spark-worker
+    depends_on:
+      - spark-master
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_WEBUI_PORT_NUMBER=8082
+    command: >
+      /opt/bitnami/spark/sbin/start-worker.sh --webui-port 8082 spark://spark-master:7077
+    ports:
+      - "8082:8082"  # Worker Web UI
+
+  # 9）Metabase
+  metabase:
+    image: metabase/metabase:latest
+    ports:
+      - "3000:3000"
+    environment:
+      MB_DB_FILE: /metabase-data/metabase.db
+    volumes:
+      - ./metabase-data:/metabase-data
+  
+
+volumes:
+  postgres_data:

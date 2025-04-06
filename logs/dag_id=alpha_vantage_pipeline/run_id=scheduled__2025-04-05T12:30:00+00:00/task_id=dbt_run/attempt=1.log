@@ -1,0 +1,23 @@
+[2025-04-05T13:20:33.813+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: alpha_vantage_pipeline.dbt_run scheduled__2025-04-05T12:30:00+00:00 [queued]>
+[2025-04-05T13:20:33.874+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: alpha_vantage_pipeline.dbt_run scheduled__2025-04-05T12:30:00+00:00 [queued]>
+[2025-04-05T13:20:33.876+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-05T13:20:33.877+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2025-04-05T13:20:33.878+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-05T13:20:33.932+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): dbt_run> on 2025-04-05 12:30:00+00:00
+[2025-04-05T13:20:33.945+0000] {standard_task_runner.py:55} INFO - Started process 243 to run task
+[2025-04-05T13:20:33.951+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'alpha_vantage_pipeline', 'dbt_run', 'scheduled__2025-04-05T12:30:00+00:00', '--job-id', '204', '--raw', '--subdir', 'DAGS_FOLDER/alpha_vantage_pipeline.py', '--cfg-path', '/tmp/tmpqsuiy6sp']
+[2025-04-05T13:20:33.953+0000] {standard_task_runner.py:83} INFO - Job 204: Subtask dbt_run
+[2025-04-05T13:20:34.045+0000] {task_command.py:388} INFO - Running <TaskInstance: alpha_vantage_pipeline.dbt_run scheduled__2025-04-05T12:30:00+00:00 [running]> on host 880ad7b30d37
+[2025-04-05T13:20:34.227+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=alpha_vantage_pipeline
+AIRFLOW_CTX_TASK_ID=dbt_run
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-05T12:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-04-05T12:30:00+00:00
+[2025-04-05T13:20:43.638+0000] {python.py:177} INFO - Done. Returned value was: None
+[2025-04-05T13:20:43.665+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=alpha_vantage_pipeline, task_id=dbt_run, execution_date=20250405T123000, start_date=20250405T132033, end_date=20250405T132043
+[2025-04-05T13:20:43.733+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2025-04-05T13:20:43.815+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

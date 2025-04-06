@@ -1,0 +1,27 @@
+[2025-04-05T10:52:12.984+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: alpha_vantage_pipeline.load_to_bq manual__2025-04-05T10:51:53.596992+00:00 [queued]>
+[2025-04-05T10:52:12.998+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: alpha_vantage_pipeline.load_to_bq manual__2025-04-05T10:51:53.596992+00:00 [queued]>
+[2025-04-05T10:52:12.999+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-05T10:52:12.999+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2025-04-05T10:52:12.999+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-05T10:52:13.018+0000] {taskinstance.py:1300} INFO - Executing <Task(GCSToBigQueryOperator): load_to_bq> on 2025-04-05 10:51:53.596992+00:00
+[2025-04-05T10:52:13.029+0000] {standard_task_runner.py:55} INFO - Started process 281 to run task
+[2025-04-05T10:52:13.037+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'alpha_vantage_pipeline', 'load_to_bq', 'manual__2025-04-05T10:51:53.596992+00:00', '--job-id', '106', '--raw', '--subdir', 'DAGS_FOLDER/alpha_vantage_pipeline.py', '--cfg-path', '/tmp/tmpmc05gr41']
+[2025-04-05T10:52:13.039+0000] {standard_task_runner.py:83} INFO - Job 106: Subtask load_to_bq
+[2025-04-05T10:52:13.099+0000] {task_command.py:388} INFO - Running <TaskInstance: alpha_vantage_pipeline.load_to_bq manual__2025-04-05T10:51:53.596992+00:00 [running]> on host e8ddbeabb1e5
+[2025-04-05T10:52:13.161+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=alpha_vantage_pipeline
+AIRFLOW_CTX_TASK_ID=load_to_bq
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-05T10:51:53.596992+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-04-05T10:51:53.596992+00:00
+[2025-04-05T10:52:13.170+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2025-04-05T10:52:13.171+0000] {gcs_to_bigquery.py:377} INFO - Using existing BigQuery table for storing data...
+[2025-04-05T10:52:13.172+0000] {credentials_provider.py:323} INFO - Getting connection using `google.auth.default()` since no key file is defined for hook.
+[2025-04-05T10:52:13.227+0000] {gcs_to_bigquery.py:381} INFO - Executing: {'load': {'autodetect': True, 'createDisposition': 'CREATE_IF_NEEDED', 'destinationTable': {'projectId': 'finflow-455108', 'datasetId': 'my_dataset', 'tableId': 'final_table'}, 'sourceFormat': 'CSV', 'sourceUris': ['gs://finflow-455108-data-lake/raw/alpha_vantage/*.csv'], 'writeDisposition': 'WRITE_TRUNCATE', 'ignoreUnknownValues': False, 'skipLeadingRows': None, 'fieldDelimiter': ',', 'quote': None, 'allowQuotedNewlines': False, 'encoding': 'UTF-8'}}
+[2025-04-05T10:52:13.228+0000] {bigquery.py:1542} INFO - Inserting job ***_alpha_vantage_pipeline_load_to_bq_2025_04_05T10_51_53_596992_00_00_8f7fdc680a03a908c4298395e9514aae
+[2025-04-05T10:52:21.412+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=alpha_vantage_pipeline, task_id=load_to_bq, execution_date=20250405T105153, start_date=20250405T105212, end_date=20250405T105221
+[2025-04-05T10:52:21.437+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2025-04-05T10:52:21.455+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

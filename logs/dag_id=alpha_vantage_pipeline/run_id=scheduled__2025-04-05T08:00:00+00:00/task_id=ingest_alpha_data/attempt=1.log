@@ -1,0 +1,28 @@
+[2025-04-05T08:30:01.005+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: alpha_vantage_pipeline.ingest_alpha_data scheduled__2025-04-05T08:00:00+00:00 [queued]>
+[2025-04-05T08:30:01.017+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: alpha_vantage_pipeline.ingest_alpha_data scheduled__2025-04-05T08:00:00+00:00 [queued]>
+[2025-04-05T08:30:01.018+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-05T08:30:01.018+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2025-04-05T08:30:01.019+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-05T08:30:01.035+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): ingest_alpha_data> on 2025-04-05 08:00:00+00:00
+[2025-04-05T08:30:01.043+0000] {standard_task_runner.py:55} INFO - Started process 581 to run task
+[2025-04-05T08:30:01.046+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'alpha_vantage_pipeline', 'ingest_alpha_data', 'scheduled__2025-04-05T08:00:00+00:00', '--job-id', '57', '--raw', '--subdir', 'DAGS_FOLDER/alpha_vantage_pipeline.py', '--cfg-path', '/tmp/tmpkjdgz637']
+[2025-04-05T08:30:01.048+0000] {standard_task_runner.py:83} INFO - Job 57: Subtask ingest_alpha_data
+[2025-04-05T08:30:01.111+0000] {task_command.py:388} INFO - Running <TaskInstance: alpha_vantage_pipeline.ingest_alpha_data scheduled__2025-04-05T08:00:00+00:00 [running]> on host 7f1c65875bfa
+[2025-04-05T08:30:01.189+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=alpha_vantage_pipeline
+AIRFLOW_CTX_TASK_ID=ingest_alpha_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-05T08:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-04-05T08:00:00+00:00
+[2025-04-05T08:30:03.189+0000] {logging_mixin.py:137} INFO - [INFO] Uploaded USO -> raw/alpha_vantage/USO/2025-04-05-08-30.csv
+[2025-04-05T08:30:04.197+0000] {logging_mixin.py:137} INFO - [INFO] Uploaded AAPL -> raw/alpha_vantage/AAPL/2025-04-05-08-30.csv
+[2025-04-05T08:30:04.448+0000] {logging_mixin.py:137} INFO - [WARN] QQQ no data or error: {'Information': 'We have detected your API key as 9FYNWTAWK35E5BHA and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.'}
+[2025-04-05T08:30:04.701+0000] {logging_mixin.py:137} INFO - [WARN] AUD/CNY no data: {'Information': 'Thank you for using Alpha Vantage! This is a premium endpoint. You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly unlock all premium endpoints'}
+[2025-04-05T08:30:05.400+0000] {logging_mixin.py:137} INFO - [WARN] USD/CNY no data: {'Information': 'Thank you for using Alpha Vantage! This is a premium endpoint. You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly unlock all premium endpoints'}
+[2025-04-05T08:30:05.400+0000] {python.py:177} INFO - Done. Returned value was: None
+[2025-04-05T08:30:05.411+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=alpha_vantage_pipeline, task_id=ingest_alpha_data, execution_date=20250405T080000, start_date=20250405T083001, end_date=20250405T083005
+[2025-04-05T08:30:05.433+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2025-04-05T08:30:05.460+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

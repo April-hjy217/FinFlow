@@ -1,0 +1,37 @@
+[2025-04-06T00:00:19.560+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: alpha_vantage_pipeline.load_to_bq scheduled__2025-04-05T23:30:00+00:00 [queued]>
+[2025-04-06T00:00:19.568+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: alpha_vantage_pipeline.load_to_bq scheduled__2025-04-05T23:30:00+00:00 [queued]>
+[2025-04-06T00:00:19.568+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-06T00:00:19.568+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2025-04-06T00:00:19.569+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-06T00:00:19.579+0000] {taskinstance.py:1300} INFO - Executing <Task(GCSToBigQueryOperator): load_to_bq> on 2025-04-05 23:30:00+00:00
+[2025-04-06T00:00:19.587+0000] {standard_task_runner.py:55} INFO - Started process 609 to run task
+[2025-04-06T00:00:19.590+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'alpha_vantage_pipeline', 'load_to_bq', 'scheduled__2025-04-05T23:30:00+00:00', '--job-id', '229', '--raw', '--subdir', 'DAGS_FOLDER/alpha_vantage_pipeline.py', '--cfg-path', '/tmp/tmp9iof3mwl']
+[2025-04-06T00:00:19.591+0000] {standard_task_runner.py:83} INFO - Job 229: Subtask load_to_bq
+[2025-04-06T00:00:19.647+0000] {task_command.py:388} INFO - Running <TaskInstance: alpha_vantage_pipeline.load_to_bq scheduled__2025-04-05T23:30:00+00:00 [running]> on host cb03ac813080
+[2025-04-06T00:00:19.711+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=alpha_vantage_pipeline
+AIRFLOW_CTX_TASK_ID=load_to_bq
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-05T23:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-04-05T23:30:00+00:00
+[2025-04-06T00:00:19.720+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2025-04-06T00:00:19.721+0000] {gcs_to_bigquery.py:377} INFO - Using existing BigQuery table for storing data...
+[2025-04-06T00:00:19.722+0000] {credentials_provider.py:323} INFO - Getting connection using `google.auth.default()` since no key file is defined for hook.
+[2025-04-06T00:00:19.768+0000] {gcs_to_bigquery.py:381} INFO - Executing: {'load': {'autodetect': True, 'createDisposition': 'CREATE_IF_NEEDED', 'destinationTable': {'projectId': 'finflow-455108', 'datasetId': 'my_dataset', 'tableId': 'final_table'}, 'sourceFormat': 'CSV', 'sourceUris': ['gs://finflow-455108-data-lake/raw/alpha_vantage/*/*.csv'], 'writeDisposition': 'WRITE_TRUNCATE', 'ignoreUnknownValues': False, 'skipLeadingRows': None, 'fieldDelimiter': ',', 'quote': None, 'allowQuotedNewlines': False, 'encoding': 'UTF-8'}}
+[2025-04-06T00:00:19.769+0000] {bigquery.py:1542} INFO - Inserting job ***_alpha_vantage_pipeline_load_to_bq_2025_04_05T23_30_00_00_00_a6842e5ed4074f07445d0dbfc6d680a6
+[2025-04-06T00:00:21.051+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/transfers/gcs_to_bigquery.py", line 440, in execute
+    job.result(timeout=self.result_timeout, retry=self.result_retry)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/base.py", line 728, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 137, in result
+    raise self._exception
+google.api_core.exceptions.NotFound: 404 Not found: Uris gs://finflow-455108-data-lake/raw/alpha_vantage/*/*.csv
+[2025-04-06T00:00:21.063+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=alpha_vantage_pipeline, task_id=load_to_bq, execution_date=20250405T233000, start_date=20250406T000019, end_date=20250406T000021
+[2025-04-06T00:00:21.074+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 229 for task load_to_bq (404 Not found: Uris gs://finflow-455108-data-lake/raw/alpha_vantage/*/*.csv; 609)
+[2025-04-06T00:00:21.087+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2025-04-06T00:00:21.129+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,1425 @@
+
+
+============================== 2025-04-05 08:02:41.727157 | fbb1ee5f-8952-4711-b18f-f33563cf7fd3 ==============================
+[0m08:02:41.727178 [info ] [MainThread]: Running with dbt=1.3.0
+[0m08:02:41.727730 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m08:02:41.728022 [debug] [MainThread]: Tracking: tracking
+[0m08:02:41.739308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c79186a9810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c79186a9a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c79186a9c10>]}
+[0m08:02:41.751368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7918529a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7918529d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7918529190>]}
+[0m08:02:41.752030 [debug] [MainThread]: Flushing usage events
+[0m08:02:42.850838 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'GCP_PROJECT_ID'
+
+
+============================== 2025-04-05 08:33:51.396384 | 85b1dbb4-d080-4c88-94aa-c04106beecb1 ==============================
+[0m08:33:51.396401 [info ] [MainThread]: Running with dbt=1.3.0
+[0m08:33:51.402310 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m08:33:51.404433 [debug] [MainThread]: Tracking: tracking
+[0m08:33:51.450255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x724d77e1b150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x724d77e1bcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x724d77e1bb90>]}
+[0m08:33:51.513938 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x724d77c70510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x724d77c5cc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x724d77c5ca50>]}
+[0m08:33:51.525178 [debug] [MainThread]: Flushing usage events
+[0m08:33:52.732578 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'DATASET_ID'
+
+
+============================== 2025-04-05 08:46:54.305487 | 50cabd27-cd6e-4fa4-93c3-dd8316fa6c90 ==============================
+[0m08:46:54.305533 [info ] [MainThread]: Running with dbt=1.3.0
+[0m08:46:54.308206 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m08:46:54.308565 [debug] [MainThread]: Tracking: tracking
+[0m08:46:54.311456 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781fc6f94610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781fc6f94850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781fc6f94710>]}
+[0m08:46:54.335110 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+[0m08:46:54.335903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '50cabd27-cd6e-4fa4-93c3-dd8316fa6c90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781fc6f11890>]}
+[0m08:46:54.401073 [debug] [MainThread]: Parsing macros/adapters.sql
+[0m08:46:54.444521 [debug] [MainThread]: Parsing macros/etc.sql
+[0m08:46:54.452453 [debug] [MainThread]: Parsing macros/catalog.sql
+[0m08:46:54.467377 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+[0m08:46:54.473525 [debug] [MainThread]: Parsing macros/materializations/view.sql
+[0m08:46:54.481153 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+[0m08:46:54.529922 [debug] [MainThread]: Parsing macros/materializations/copy.sql
+[0m08:46:54.538566 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+[0m08:46:54.541649 [debug] [MainThread]: Parsing macros/materializations/table.sql
+[0m08:46:54.554625 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m08:46:54.559402 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m08:46:54.561687 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m08:46:54.563539 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m08:46:54.564771 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m08:46:54.565770 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m08:46:54.566792 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m08:46:54.567673 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m08:46:54.568735 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m08:46:54.569707 [debug] [MainThread]: Parsing macros/utils/timestamps.sql
+[0m08:46:54.571826 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m08:46:54.573259 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m08:46:54.575213 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m08:46:54.576260 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m08:46:54.578786 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m08:46:54.579599 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m08:46:54.580939 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m08:46:54.582123 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m08:46:54.583228 [debug] [MainThread]: Parsing macros/etc/statement.sql
+[0m08:46:54.592956 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+[0m08:46:54.609876 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+[0m08:46:54.614609 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+[0m08:46:54.621802 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+[0m08:46:54.624690 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+[0m08:46:54.652530 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+[0m08:46:54.674015 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+[0m08:46:54.690033 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+[0m08:46:54.706551 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+[0m08:46:54.746444 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+[0m08:46:54.749860 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+[0m08:46:54.753515 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+[0m08:46:54.762892 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+[0m08:46:54.770311 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+[0m08:46:54.781438 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+[0m08:46:54.812637 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+[0m08:46:54.833054 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+[0m08:46:54.848880 [debug] [MainThread]: Parsing macros/materializations/models/incremental/strategies.sql
+[0m08:46:54.862630 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+[0m08:46:54.888032 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+[0m08:46:54.889693 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+[0m08:46:54.892140 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+[0m08:46:54.893543 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+[0m08:46:54.899220 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+[0m08:46:54.902670 [debug] [MainThread]: Parsing macros/python_model/python.sql
+[0m08:46:54.908684 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+[0m08:46:54.918579 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+[0m08:46:54.923247 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+[0m08:46:54.930245 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+[0m08:46:54.932579 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+[0m08:46:54.946924 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+[0m08:46:54.949856 [debug] [MainThread]: Parsing macros/adapters/timestamps.sql
+[0m08:46:54.953519 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+[0m08:46:54.955795 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m08:46:54.969794 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+[0m08:46:54.971517 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+[0m08:46:54.974065 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+[0m08:46:54.975631 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+[0m08:46:54.976426 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+[0m08:46:54.977373 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+[0m08:46:54.978300 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+[0m08:46:54.979758 [debug] [MainThread]: Parsing macros/utils/replace.sql
+[0m08:46:54.981163 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m08:46:54.982548 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m08:46:54.984938 [debug] [MainThread]: Parsing macros/utils/literal.sql
+[0m08:46:54.986026 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m08:46:54.987529 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m08:46:54.988718 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m08:46:54.989924 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m08:46:54.991023 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m08:46:54.991943 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m08:46:54.993167 [debug] [MainThread]: Parsing macros/utils/length.sql
+[0m08:46:54.994377 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m08:46:54.995499 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m08:46:54.996792 [debug] [MainThread]: Parsing macros/utils/cast_bool_to_text.sql
+[0m08:46:54.998028 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m08:46:54.999698 [debug] [MainThread]: Parsing macros/utils/concat.sql
+[0m08:46:55.000815 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m08:46:55.002164 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m08:46:55.004337 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m08:46:55.005300 [debug] [MainThread]: Parsing macros/utils/data_types.sql
+[0m08:46:55.012195 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m08:46:55.013403 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m08:46:55.014702 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m08:46:55.016630 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m08:46:55.018759 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+[0m08:46:55.560345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '50cabd27-cd6e-4fa4-93c3-dd8316fa6c90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781fc7443350>]}
+[0m08:46:55.566279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '50cabd27-cd6e-4fa4-93c3-dd8316fa6c90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781fc6e99790>]}
+[0m08:46:55.566602 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m08:46:55.566996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '50cabd27-cd6e-4fa4-93c3-dd8316fa6c90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781fc6fcb610>]}
+[0m08:46:55.568157 [info ] [MainThread]: 
+[0m08:46:55.568572 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m08:46:55.575277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781fc70d4250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781fc71f8990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781fc6e85ed0>]}
+[0m08:46:55.575626 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 08:56:33.695604 | 62e25623-5258-474d-a285-ce9b90fe55f0 ==============================
+[0m08:56:33.695658 [info ] [MainThread]: Running with dbt=1.3.0
+[0m08:56:33.699264 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m08:56:33.699583 [debug] [MainThread]: Tracking: tracking
+[0m08:56:33.703634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7210a2a35450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7210a2a35690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7210a2a35550>]}
+[0m08:56:33.974300 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m08:56:33.977304 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m08:56:34.002755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '62e25623-5258-474d-a285-ce9b90fe55f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7210a29445d0>]}
+[0m08:56:34.034689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '62e25623-5258-474d-a285-ce9b90fe55f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7210a2a4be50>]}
+[0m08:56:34.035390 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m08:56:34.041255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '62e25623-5258-474d-a285-ce9b90fe55f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7210a2a4bed0>]}
+[0m08:56:34.043781 [info ] [MainThread]: 
+[0m08:56:34.050374 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m08:56:34.078996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7210a377c290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7210a2a58b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7210a2a58c90>]}
+[0m08:56:34.079828 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 08:56:39.031148 | 77abf6e8-7523-4741-8558-3d4554d0b21a ==============================
+[0m08:56:39.031192 [info ] [MainThread]: Running with dbt=1.3.0
+[0m08:56:39.032988 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m08:56:39.033480 [debug] [MainThread]: Tracking: tracking
+[0m08:56:39.035430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74dfed19f8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74dfde3ba110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74dfde3ba210>]}
+[0m08:56:39.121085 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m08:56:39.121553 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m08:56:39.132740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '77abf6e8-7523-4741-8558-3d4554d0b21a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74dfdd213490>]}
+[0m08:56:39.144667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '77abf6e8-7523-4741-8558-3d4554d0b21a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74dfdd21d510>]}
+[0m08:56:39.146321 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m08:56:39.148347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '77abf6e8-7523-4741-8558-3d4554d0b21a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74dfdd21d910>]}
+[0m08:56:39.150520 [info ] [MainThread]: 
+[0m08:56:39.151553 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m08:56:39.167463 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74dfdd259650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74dfdd259fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74dfdd259810>]}
+[0m08:56:39.168429 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 10:35:56.460898 | d78517d0-f2af-4339-8427-39f8cbb08e7f ==============================
+[0m10:35:56.460951 [info ] [MainThread]: Running with dbt=1.3.0
+[0m10:35:56.466807 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m10:35:56.467241 [debug] [MainThread]: Tracking: tracking
+[0m10:35:56.473441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72aafe950690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72aafe9ec050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72aafe9ec710>]}
+[0m10:35:56.816227 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:35:56.816784 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:35:56.848834 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd78517d0-f2af-4339-8427-39f8cbb08e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72aafe89ca10>]}
+[0m10:35:56.878811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd78517d0-f2af-4339-8427-39f8cbb08e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72aafe915050>]}
+[0m10:35:56.885549 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m10:35:56.886323 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd78517d0-f2af-4339-8427-39f8cbb08e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72aafe915150>]}
+[0m10:35:56.891781 [info ] [MainThread]: 
+[0m10:35:56.896123 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m10:35:56.929647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72aafe8d7f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72aafe8d7d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72aafe8d7190>]}
+[0m10:35:56.930092 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 10:36:42.840354 | d03c7e4b-d807-464f-88f5-b3b76e63ed0d ==============================
+[0m10:36:42.840404 [info ] [MainThread]: Running with dbt=1.3.0
+[0m10:36:42.841758 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m10:36:42.842311 [debug] [MainThread]: Tracking: tracking
+[0m10:36:42.844272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75935ff81710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75935ffd9f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75935ffd9fd0>]}
+[0m10:36:42.937861 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:36:42.938406 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:36:42.952066 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd03c7e4b-d807-464f-88f5-b3b76e63ed0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75935fe21210>]}
+[0m10:36:42.962926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd03c7e4b-d807-464f-88f5-b3b76e63ed0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75935fea2550>]}
+[0m10:36:42.963479 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m10:36:42.964363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd03c7e4b-d807-464f-88f5-b3b76e63ed0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75935fea2bd0>]}
+[0m10:36:42.965932 [info ] [MainThread]: 
+[0m10:36:42.966713 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m10:36:42.976478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7593659ba550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75935fdf0e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75935fe5e7d0>]}
+[0m10:36:42.976953 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 10:52:10.374312 | 3c22bf21-9aed-42cd-ac91-affd53ae56d2 ==============================
+[0m10:52:10.374357 [info ] [MainThread]: Running with dbt=1.3.0
+[0m10:52:10.379894 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m10:52:10.380233 [debug] [MainThread]: Tracking: tracking
+[0m10:52:10.385485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f530b929750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f530b929e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f530b929c50>]}
+[0m10:52:10.497903 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:52:10.498527 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:52:10.508732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3c22bf21-9aed-42cd-ac91-affd53ae56d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f530b81a850>]}
+[0m10:52:10.519597 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3c22bf21-9aed-42cd-ac91-affd53ae56d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f530b9ada10>]}
+[0m10:52:10.520197 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m10:52:10.520920 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3c22bf21-9aed-42cd-ac91-affd53ae56d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f530b9adc90>]}
+[0m10:52:10.522525 [info ] [MainThread]: 
+[0m10:52:10.523239 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m10:52:10.532967 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f530b86bd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f530b86bb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f530b86bed0>]}
+[0m10:52:10.533497 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 10:55:34.828117 | 85041986-6466-4b7d-be08-7b51db9af560 ==============================
+[0m10:55:34.828165 [info ] [MainThread]: Running with dbt=1.3.0
+[0m10:55:34.830170 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m10:55:34.830475 [debug] [MainThread]: Tracking: tracking
+[0m10:55:34.839695 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73fb2328a6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73fb2328a910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73fb2328a7d0>]}
+[0m10:55:34.950625 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:55:34.951699 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:55:34.962263 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '85041986-6466-4b7d-be08-7b51db9af560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73fb23196350>]}
+[0m10:55:34.973197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '85041986-6466-4b7d-be08-7b51db9af560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73fb232166d0>]}
+[0m10:55:34.973798 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m10:55:34.974713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '85041986-6466-4b7d-be08-7b51db9af560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73fb23216810>]}
+[0m10:55:34.976346 [info ] [MainThread]: 
+[0m10:55:34.977608 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m10:55:34.987687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73fb233028d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73fb232b4690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73fb232b4a10>]}
+[0m10:55:34.988217 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 11:00:16.933521 | fcf8f87e-6bc2-43e2-a2a0-10daaa570106 ==============================
+[0m11:00:16.933559 [info ] [MainThread]: Running with dbt=1.3.0
+[0m11:00:16.934596 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m11:00:16.935118 [debug] [MainThread]: Tracking: tracking
+[0m11:00:16.936852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ed82b4c4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ed82b8c990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ed82bf7c50>]}
+[0m11:00:17.016070 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:00:17.016696 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:00:17.026171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fcf8f87e-6bc2-43e2-a2a0-10daaa570106', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ed88d91390>]}
+[0m11:00:17.037863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fcf8f87e-6bc2-43e2-a2a0-10daaa570106', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ed82a6f610>]}
+[0m11:00:17.038458 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m11:00:17.039147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fcf8f87e-6bc2-43e2-a2a0-10daaa570106', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ed82a6fc10>]}
+[0m11:00:17.040950 [info ] [MainThread]: 
+[0m11:00:17.041682 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m11:00:17.051362 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ed969d58d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ed83334c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ed82a2aa50>]}
+[0m11:00:17.051872 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 11:06:20.465233 | 3d113400-2c57-4bbb-86ea-64e302556d36 ==============================
+[0m11:06:20.465274 [info ] [MainThread]: Running with dbt=1.3.0
+[0m11:06:20.466590 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m11:06:20.466876 [debug] [MainThread]: Tracking: tracking
+[0m11:06:20.471729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7a09bbd9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7a09c9af10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7a0beda090>]}
+[0m11:06:20.574738 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:06:20.575166 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:06:20.585405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3d113400-2c57-4bbb-86ea-64e302556d36', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7a09b2e910>]}
+[0m11:06:20.599689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3d113400-2c57-4bbb-86ea-64e302556d36', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7a09beca90>]}
+[0m11:06:20.600257 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m11:06:20.601141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3d113400-2c57-4bbb-86ea-64e302556d36', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7a09becb10>]}
+[0m11:06:20.602757 [info ] [MainThread]: 
+[0m11:06:20.603560 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m11:06:20.613476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7a09b6ae50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7a09b6ab10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7a09b6a090>]}
+[0m11:06:20.613995 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 11:13:32.665911 | e5f3039b-c7c7-4654-906d-ba657ec5cb0f ==============================
+[0m11:13:32.665962 [info ] [MainThread]: Running with dbt=1.3.0
+[0m11:13:32.669105 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m11:13:32.669491 [debug] [MainThread]: Tracking: tracking
+[0m11:13:32.680995 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7336ac394d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7336ac394850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7336ac394cd0>]}
+[0m11:13:32.799458 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:13:32.800104 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:13:32.810395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e5f3039b-c7c7-4654-906d-ba657ec5cb0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7336ac2c9a90>]}
+[0m11:13:32.821392 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e5f3039b-c7c7-4654-906d-ba657ec5cb0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7336ac33e090>]}
+[0m11:13:32.821905 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m11:13:32.822897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e5f3039b-c7c7-4654-906d-ba657ec5cb0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7336ac33e550>]}
+[0m11:13:32.824647 [info ] [MainThread]: 
+[0m11:13:32.825166 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m11:13:32.834008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7336ac351610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7336ac351510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7336ac351110>]}
+[0m11:13:32.834449 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 11:32:52.505524 | b78c39f1-44ad-44da-96a1-c61e06a467fe ==============================
+[0m11:32:52.505568 [info ] [MainThread]: Running with dbt=1.3.0
+[0m11:32:52.508894 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m11:32:52.511330 [debug] [MainThread]: Tracking: tracking
+[0m11:32:52.519771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743bddaed590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743bddaed750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743bddaed610>]}
+[0m11:32:52.738667 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:32:52.739228 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:32:52.759759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b78c39f1-44ad-44da-96a1-c61e06a467fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743bdda82710>]}
+[0m11:32:52.780629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b78c39f1-44ad-44da-96a1-c61e06a467fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743bddb07250>]}
+[0m11:32:52.781201 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m11:32:52.784364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b78c39f1-44ad-44da-96a1-c61e06a467fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743bddb07a50>]}
+[0m11:32:52.786048 [info ] [MainThread]: 
+[0m11:32:52.786776 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m11:32:52.796387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743bddb34550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743bddb64c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x743bde45fb10>]}
+[0m11:32:52.796893 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 11:33:16.718559 | d88d6f16-b943-450c-a840-da0b6215d963 ==============================
+[0m11:33:16.718609 [info ] [MainThread]: Running with dbt=1.3.0
+[0m11:33:16.719597 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m11:33:16.720028 [debug] [MainThread]: Tracking: tracking
+[0m11:33:16.721652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x745cdf7ff490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x745cdf8aaf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x745cdf8aac50>]}
+[0m11:33:16.797590 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:33:16.798047 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:33:16.807434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd88d6f16-b943-450c-a840-da0b6215d963', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x745cdf6a5050>]}
+[0m11:33:16.817347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd88d6f16-b943-450c-a840-da0b6215d963', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x745cdf722a10>]}
+[0m11:33:16.817863 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m11:33:16.818529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd88d6f16-b943-450c-a840-da0b6215d963', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x745cdf722a90>]}
+[0m11:33:16.820085 [info ] [MainThread]: 
+[0m11:33:16.820742 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m11:33:16.829922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x745cdf858e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x745cdf66ed10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x745cdf8683d0>]}
+[0m11:33:16.830405 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 12:07:53.157760 | cd16ddbe-3680-495f-8d86-dbdb668faa87 ==============================
+[0m12:07:53.157808 [info ] [MainThread]: Running with dbt=1.3.0
+[0m12:07:53.198801 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m12:07:53.202485 [debug] [MainThread]: Tracking: tracking
+[0m12:07:53.207996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7817e7cffb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7817e7cffd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7817e7cffa90>]}
+[0m12:07:53.486028 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:07:53.486597 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:07:53.505666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cd16ddbe-3680-495f-8d86-dbdb668faa87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7817e7c5a850>]}
+[0m12:07:53.519986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cd16ddbe-3680-495f-8d86-dbdb668faa87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7817e7dea5d0>]}
+[0m12:07:53.520601 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m12:07:53.521320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cd16ddbe-3680-495f-8d86-dbdb668faa87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7817e7dea750>]}
+[0m12:07:53.523196 [info ] [MainThread]: 
+[0m12:07:53.523882 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m12:07:53.533577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7817e7bbff90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7817f1c94b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7817e7cabb50>]}
+[0m12:07:53.534088 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 12:30:13.331822 | 884b4083-9e6b-42fd-853d-884116729939 ==============================
+[0m12:30:13.331861 [info ] [MainThread]: Running with dbt=1.3.0
+[0m12:30:13.333641 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m12:30:13.334063 [debug] [MainThread]: Tracking: tracking
+[0m12:30:13.335540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfc45fab710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfc46051fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfc46051cd0>]}
+[0m12:30:13.432860 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:30:13.433671 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:30:13.443839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '884b4083-9e6b-42fd-853d-884116729939', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfc45e4d410>]}
+[0m12:30:13.454654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '884b4083-9e6b-42fd-853d-884116729939', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfc45ecc9d0>]}
+[0m12:30:13.455161 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m12:30:13.456189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '884b4083-9e6b-42fd-853d-884116729939', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfc45eccbd0>]}
+[0m12:30:13.457855 [info ] [MainThread]: 
+[0m12:30:13.458633 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m12:30:13.468824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfc45e89910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfc45e897d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfc45e89450>]}
+[0m12:30:13.469260 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 13:20:41.498839 | b87bd25f-2656-4a9d-9db9-4eb48636ee3a ==============================
+[0m13:20:41.500635 [info ] [MainThread]: Running with dbt=1.3.0
+[0m13:20:41.518665 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m13:20:41.525157 [debug] [MainThread]: Tracking: tracking
+[0m13:20:41.540802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ff49292fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ff4b4d2910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ff492920d0>]}
+[0m13:20:41.908676 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:20:41.914510 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:20:41.999761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b87bd25f-2656-4a9d-9db9-4eb48636ee3a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ff49136ed0>]}
+[0m13:20:42.083586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b87bd25f-2656-4a9d-9db9-4eb48636ee3a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ff491ad290>]}
+[0m13:20:42.088253 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m13:20:42.092169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b87bd25f-2656-4a9d-9db9-4eb48636ee3a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ff491ad550>]}
+[0m13:20:42.101755 [info ] [MainThread]: 
+[0m13:20:42.103286 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m13:20:42.135129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ff4b4d2910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ff491854d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ff49185910>]}
+[0m13:20:42.135629 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 13:27:45.606321 | 2fb9b55d-5c06-4a15-9a95-969d513a6a08 ==============================
+[0m13:27:45.606367 [info ] [MainThread]: Running with dbt=1.3.0
+[0m13:27:45.621600 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m13:27:45.623452 [debug] [MainThread]: Tracking: tracking
+[0m13:27:45.638733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09226fcad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0922745f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09226fc8d0>]}
+[0m13:27:45.748333 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:27:45.748747 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:27:45.758747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2fb9b55d-5c06-4a15-9a95-969d513a6a08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0922612990>]}
+[0m13:27:45.768842 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2fb9b55d-5c06-4a15-9a95-969d513a6a08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09225d7490>]}
+[0m13:27:45.769332 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m13:27:45.769939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2fb9b55d-5c06-4a15-9a95-969d513a6a08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09225d7990>]}
+[0m13:27:45.772019 [info ] [MainThread]: 
+[0m13:27:45.772577 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m13:27:45.784111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0924932dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f092262c6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f092262cad0>]}
+[0m13:27:45.784561 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 23:31:21.554690 | a4f6bcea-5ddf-4920-b052-993be62fd270 ==============================
+[0m23:31:21.554733 [info ] [MainThread]: Running with dbt=1.3.0
+[0m23:31:21.558162 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m23:31:21.559072 [debug] [MainThread]: Tracking: tracking
+[0m23:31:21.581230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76823284fc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76823284f950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76823284f810>]}
+[0m23:31:21.734384 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:31:21.735031 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:31:21.746523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a4f6bcea-5ddf-4920-b052-993be62fd270', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768238b1fe10>]}
+[0m23:31:21.757532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a4f6bcea-5ddf-4920-b052-993be62fd270', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7682327f9790>]}
+[0m23:31:21.758637 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m23:31:21.759858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a4f6bcea-5ddf-4920-b052-993be62fd270', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7682327f9b10>]}
+[0m23:31:21.764175 [info ] [MainThread]: 
+[0m23:31:21.765368 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m23:31:21.781407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7682327dcb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7682327dcf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7682327dc810>]}
+[0m23:31:21.781886 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-05 23:49:25.046956 | a723d85d-388b-4875-a000-5e4c391fb9e9 ==============================
+[0m23:49:25.046998 [info ] [MainThread]: Running with dbt=1.3.0
+[0m23:49:25.053410 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m23:49:25.055380 [debug] [MainThread]: Tracking: tracking
+[0m23:49:25.062412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b6954339810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b69543397d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b6954339950>]}
+[0m23:49:25.218834 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:49:25.219300 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:49:25.239648 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a723d85d-388b-4875-a000-5e4c391fb9e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b69541df250>]}
+[0m23:49:25.266561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a723d85d-388b-4875-a000-5e4c391fb9e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b695425a4d0>]}
+[0m23:49:25.267797 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m23:49:25.268753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a723d85d-388b-4875-a000-5e4c391fb9e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b695425a350>]}
+[0m23:49:25.273150 [info ] [MainThread]: 
+[0m23:49:25.276378 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m23:49:25.320427 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b6954381e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b69541a9ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b69542c4ad0>]}
+[0m23:49:25.325556 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-06 00:00:16.115415 | f276d6de-df8a-47e2-b669-e768f15a9ac4 ==============================
+[0m00:00:16.115450 [info ] [MainThread]: Running with dbt=1.3.0
+[0m00:00:16.116537 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m00:00:16.117628 [debug] [MainThread]: Tracking: tracking
+[0m00:00:16.121389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726ecc2bc5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726ecc29ddd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726ecc2fae50>]}
+[0m00:00:16.223825 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:00:16.224364 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:00:16.234634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f276d6de-df8a-47e2-b669-e768f15a9ac4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726ecc0f9210>]}
+[0m00:00:16.246176 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f276d6de-df8a-47e2-b669-e768f15a9ac4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726ecc174a10>]}
+[0m00:00:16.246772 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m00:00:16.248112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f276d6de-df8a-47e2-b669-e768f15a9ac4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726ecc174e50>]}
+[0m00:00:16.250393 [info ] [MainThread]: 
+[0m00:00:16.251610 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m00:00:16.262237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726ecc1855d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726ecc1856d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726ecc1851d0>]}
+[0m00:00:16.262764 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-06 00:22:00.773343 | 94a6f54d-95c5-4b5b-9ff1-216b025223cb ==============================
+[0m00:22:00.773382 [info ] [MainThread]: Running with dbt=1.3.0
+[0m00:22:00.807963 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m00:22:00.809347 [debug] [MainThread]: Tracking: tracking
+[0m00:22:00.823544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78db146635d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78db14663790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78db14663650>]}
+[0m00:22:00.959553 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:22:00.960853 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:22:00.987093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '94a6f54d-95c5-4b5b-9ff1-216b025223cb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78db1456f590>]}
+[0m00:22:01.009638 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '94a6f54d-95c5-4b5b-9ff1-216b025223cb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78db145ef290>]}
+[0m00:22:01.010244 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m00:22:01.011077 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '94a6f54d-95c5-4b5b-9ff1-216b025223cb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78db145ef890>]}
+[0m00:22:01.014557 [info ] [MainThread]: 
+[0m00:22:01.016591 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m00:22:01.030467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78db1461e5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78db1468d5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78db1468d2d0>]}
+[0m00:22:01.031088 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-06 00:30:54.079301 | 03a32d32-b017-4204-941b-b2fa988798f4 ==============================
+[0m00:30:54.079342 [info ] [MainThread]: Running with dbt=1.3.0
+[0m00:30:54.120000 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m00:30:54.120712 [debug] [MainThread]: Tracking: tracking
+[0m00:30:54.122424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dface3be9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dface463f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dface3be790>]}
+[0m00:30:54.298309 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:30:54.298903 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:30:54.312035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '03a32d32-b017-4204-941b-b2fa988798f4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dface2d47d0>]}
+[0m00:30:54.321308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '03a32d32-b017-4204-941b-b2fa988798f4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dface2de550>]}
+[0m00:30:54.321740 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m00:30:54.322172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '03a32d32-b017-4204-941b-b2fa988798f4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dface2dec50>]}
+[0m00:30:54.324426 [info ] [MainThread]: 
+[0m00:30:54.324843 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m00:30:54.333347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dface424690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dface22ddd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dface29afd0>]}
+[0m00:30:54.333671 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-06 00:54:41.315274 | 92555137-dd79-446a-b7fe-856571b90ef4 ==============================
+[0m00:54:41.315329 [info ] [MainThread]: Running with dbt=1.3.0
+[0m00:54:41.322089 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m00:54:41.322706 [debug] [MainThread]: Tracking: tracking
+[0m00:54:41.325240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7de7dab62650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7de7dabaab10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7de7dab62490>]}
+[0m00:54:41.424418 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:54:41.424838 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:54:41.435120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '92555137-dd79-446a-b7fe-856571b90ef4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7de7daad4690>]}
+[0m00:54:41.449762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '92555137-dd79-446a-b7fe-856571b90ef4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7de7dab4f3d0>]}
+[0m00:54:41.450319 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m00:54:41.452151 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '92555137-dd79-446a-b7fe-856571b90ef4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7de7dab4f950>]}
+[0m00:54:41.453687 [info ] [MainThread]: 
+[0m00:54:41.455716 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m00:54:41.468978 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7de7daa20dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7de7e0e72510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7de7dab2ef50>]}
+[0m00:54:41.469705 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-06 01:00:37.623729 | 91c9ee9c-b325-4ff7-b1c5-d327e34ce792 ==============================
+[0m01:00:37.623787 [info ] [MainThread]: Running with dbt=1.3.0
+[0m01:00:37.735857 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m01:00:37.737245 [debug] [MainThread]: Tracking: tracking
+[0m01:00:37.745520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x775656803390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7756568f8dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7756568f8bd0>]}
+[0m01:00:37.947329 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m01:00:37.947866 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m01:00:37.968153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '91c9ee9c-b325-4ff7-b1c5-d327e34ce792', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77566a7b4490>]}
+[0m01:00:37.994784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '91c9ee9c-b325-4ff7-b1c5-d327e34ce792', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7756567fd9d0>]}
+[0m01:00:37.995613 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m01:00:37.999194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '91c9ee9c-b325-4ff7-b1c5-d327e34ce792', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7756567fda50>]}
+[0m01:00:38.005742 [info ] [MainThread]: 
+[0m01:00:38.006827 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m01:00:38.023081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7756566d1dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7756567bdb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7756567bdb90>]}
+[0m01:00:38.023924 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-06 01:14:03.182950 | f5bca99d-2aff-4a94-a6d4-6b31e181d1b5 ==============================
+[0m01:14:03.182987 [info ] [MainThread]: Running with dbt=1.3.0
+[0m01:14:03.242041 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m01:14:03.242405 [debug] [MainThread]: Tracking: tracking
+[0m01:14:03.245257 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741d3bfc1910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741d3bfc19d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741d3bfc1810>]}
+[0m01:14:03.364624 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m01:14:03.365121 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m01:14:03.374989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f5bca99d-2aff-4a94-a6d4-6b31e181d1b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741d419fab10>]}
+[0m01:14:03.400687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f5bca99d-2aff-4a94-a6d4-6b31e181d1b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741d3bee29d0>]}
+[0m01:14:03.402496 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m01:14:03.404437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f5bca99d-2aff-4a94-a6d4-6b31e181d1b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741d3bee24d0>]}
+[0m01:14:03.406058 [info ] [MainThread]: 
+[0m01:14:03.406806 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m01:14:03.421425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741d3be9e910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741d3be9e7d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741d3be9e150>]}
+[0m01:14:03.421894 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-06 02:01:44.170121 | 50f0c9f7-586f-4645-a802-1121667da027 ==============================
+[0m02:01:44.170164 [info ] [MainThread]: Running with dbt=1.3.0
+[0m02:01:44.177476 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m02:01:44.179006 [debug] [MainThread]: Tracking: tracking
+[0m02:01:44.180868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d48ede2550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d47b17c050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d48ede2810>]}
+[0m02:01:44.300508 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m02:01:44.301041 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m02:01:44.311094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '50f0c9f7-586f-4645-a802-1121667da027', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d48131dc50>]}
+[0m02:01:44.321720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '50f0c9f7-586f-4645-a802-1121667da027', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d47aff2810>]}
+[0m02:01:44.322246 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m02:01:44.323137 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '50f0c9f7-586f-4645-a802-1121667da027', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d47aff2410>]}
+[0m02:01:44.325874 [info ] [MainThread]: 
+[0m02:01:44.328261 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m02:01:44.343111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d47af3fd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d47afad490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d47afadb90>]}
+[0m02:01:44.343646 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-06 06:00:52.857784 | 10f1d497-9431-49c8-b9b9-98b17864344e ==============================
+[0m06:00:52.857843 [info ] [MainThread]: Running with dbt=1.3.0
+[0m06:00:52.862459 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m06:00:52.862863 [debug] [MainThread]: Tracking: tracking
+[0m06:00:52.875619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d12d4f9510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d12d4f9210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d12d4f93d0>]}
+[0m06:00:52.975134 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:00:52.975594 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:00:52.985606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '10f1d497-9431-49c8-b9b9-98b17864344e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d12d33a390>]}
+[0m06:00:52.998084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '10f1d497-9431-49c8-b9b9-98b17864344e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d12d3b50d0>]}
+[0m06:00:52.998595 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m06:00:53.001056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '10f1d497-9431-49c8-b9b9-98b17864344e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d12d3b5990>]}
+[0m06:00:53.004709 [info ] [MainThread]: 
+[0m06:00:53.007195 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m06:00:53.023060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d12e6aafd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d12d301f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d12d3ddd10>]}
+[0m06:00:53.023480 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-06 08:00:21.084079 | 0a1848c4-0b40-4292-ab72-c5777a53142d ==============================
+[0m08:00:21.084119 [info ] [MainThread]: Running with dbt=1.3.0
+[0m08:00:21.092406 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m08:00:21.092781 [debug] [MainThread]: Tracking: tracking
+[0m08:00:21.096443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72534c9fe750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72534c9fe810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72534c9fe650>]}
+[0m08:00:21.263154 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m08:00:21.263587 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m08:00:21.273268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0a1848c4-0b40-4292-ab72-c5777a53142d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72534c8a63d0>]}
+[0m08:00:21.285023 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0a1848c4-0b40-4292-ab72-c5777a53142d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72534c91e9d0>]}
+[0m08:00:21.285571 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m08:00:21.286230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0a1848c4-0b40-4292-ab72-c5777a53142d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72534c91ed90>]}
+[0m08:00:21.288092 [info ] [MainThread]: 
+[0m08:00:21.288698 [warn ] [MainThread]: [[33mWARNING[0m]: Nothing to do. Try checking your model configs and model specification args
+[0m08:00:21.300280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72534c8dba50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72534c8db550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72534c8db050>]}
+[0m08:00:21.300761 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-06 08:40:57.114689 | 25ce1b9b-3eaf-4bb2-9dee-86fac40cb123 ==============================
+[0m08:40:57.114732 [info ] [MainThread]: Running with dbt=1.3.0
+[0m08:40:57.120143 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m08:40:57.120464 [debug] [MainThread]: Tracking: tracking
+[0m08:40:57.136298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746b9e2311d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746b8e554990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746b9e231310>]}
+[0m08:40:57.274194 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 3 files added, 0 files changed.
+[0m08:40:57.274992 [debug] [MainThread]: Partial parsing: added file: my_dbt_project://models/sources.yml
+[0m08:40:57.275447 [debug] [MainThread]: Partial parsing: added file: my_dbt_project://models/dedup_forex.sql
+[0m08:40:57.275932 [debug] [MainThread]: Partial parsing: added file: my_dbt_project://models/dedup_stocks.sql
+[0m08:40:57.302380 [debug] [MainThread]: 1603: static parser failed on dedup_forex.sql
+[0m08:40:57.326478 [debug] [MainThread]: 1602: parser fallback to jinja rendering on dedup_forex.sql
+[0m08:40:57.328871 [debug] [MainThread]: 1603: static parser failed on dedup_stocks.sql
+[0m08:40:57.340612 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746b8e3221d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746b8e2312d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x746b8e234510>]}
+[0m08:40:57.341221 [debug] [MainThread]: Flushing usage events
+[0m08:40:58.330250 [error] [MainThread]: Encountered an error:
+Compilation Error in model dedup_stocks (models/dedup_stocks.sql)
+  expected token ',', got 'table'
+    line 4
+      alias='final_table_stocks_clean'   -- new table name
+
+
+============================== 2025-04-06 08:44:45.583238 | c02672c6-8a5a-46b3-9c86-b3cb412cc9a6 ==============================
+[0m08:44:45.583278 [info ] [MainThread]: Running with dbt=1.3.0
+[0m08:44:45.584599 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m08:44:45.585058 [debug] [MainThread]: Tracking: tracking
+[0m08:44:45.586628 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7792f4bbfdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7792f4c6b950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7792f4bbf710>]}
+[0m08:44:45.641759 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m08:44:45.642939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c02672c6-8a5a-46b3-9c86-b3cb412cc9a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7792f4ad7190>]}
+[0m08:44:45.673508 [debug] [MainThread]: Parsing macros/adapters.sql
+[0m08:44:45.720679 [debug] [MainThread]: Parsing macros/etc.sql
+[0m08:44:45.725207 [debug] [MainThread]: Parsing macros/catalog.sql
+[0m08:44:45.735188 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+[0m08:44:45.740164 [debug] [MainThread]: Parsing macros/materializations/view.sql
+[0m08:44:45.745285 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+[0m08:44:45.778074 [debug] [MainThread]: Parsing macros/materializations/copy.sql
+[0m08:44:45.783375 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+[0m08:44:45.788123 [debug] [MainThread]: Parsing macros/materializations/table.sql
+[0m08:44:45.800994 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m08:44:45.816972 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m08:44:45.819409 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m08:44:45.821614 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m08:44:45.822872 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m08:44:45.824158 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m08:44:45.825153 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m08:44:45.825912 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m08:44:45.826962 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m08:44:45.827895 [debug] [MainThread]: Parsing macros/utils/timestamps.sql
+[0m08:44:45.829892 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m08:44:45.831125 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m08:44:45.832788 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m08:44:45.833765 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m08:44:45.836246 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m08:44:45.836985 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m08:44:45.838172 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m08:44:45.839296 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m08:44:45.840249 [debug] [MainThread]: Parsing macros/etc/statement.sql
+[0m08:44:45.845837 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+[0m08:44:45.854470 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+[0m08:44:45.856965 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+[0m08:44:45.860925 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+[0m08:44:45.862640 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+[0m08:44:45.875092 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+[0m08:44:45.892865 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+[0m08:44:45.904492 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+[0m08:44:45.911563 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+[0m08:44:45.929280 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+[0m08:44:45.931179 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+[0m08:44:45.933151 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+[0m08:44:45.937754 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+[0m08:44:45.941430 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+[0m08:44:45.946898 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+[0m08:44:45.961682 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+[0m08:44:45.972119 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+[0m08:44:45.980872 [debug] [MainThread]: Parsing macros/materializations/models/incremental/strategies.sql
+[0m08:44:45.987959 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+[0m08:44:46.004870 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+[0m08:44:46.006480 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+[0m08:44:46.008927 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+[0m08:44:46.010349 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+[0m08:44:46.015661 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+[0m08:44:46.019187 [debug] [MainThread]: Parsing macros/python_model/python.sql
+[0m08:44:46.025357 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+[0m08:44:46.112755 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+[0m08:44:46.121127 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+[0m08:44:46.129260 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+[0m08:44:46.131413 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+[0m08:44:46.147188 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+[0m08:44:46.150208 [debug] [MainThread]: Parsing macros/adapters/timestamps.sql
+[0m08:44:46.154292 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+[0m08:44:46.156634 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m08:44:46.170744 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+[0m08:44:46.172486 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+[0m08:44:46.175144 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+[0m08:44:46.176969 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+[0m08:44:46.177762 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+[0m08:44:46.178761 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+[0m08:44:46.179722 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+[0m08:44:46.181264 [debug] [MainThread]: Parsing macros/utils/replace.sql
+[0m08:44:46.182659 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m08:44:46.184055 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m08:44:46.186572 [debug] [MainThread]: Parsing macros/utils/literal.sql
+[0m08:44:46.187620 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m08:44:46.189060 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m08:44:46.190260 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m08:44:46.191505 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m08:44:46.192568 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m08:44:46.193517 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m08:44:46.194695 [debug] [MainThread]: Parsing macros/utils/length.sql
+[0m08:44:46.195777 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m08:44:46.196930 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m08:44:46.198199 [debug] [MainThread]: Parsing macros/utils/cast_bool_to_text.sql
+[0m08:44:46.200250 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m08:44:46.202947 [debug] [MainThread]: Parsing macros/utils/concat.sql
+[0m08:44:46.204081 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m08:44:46.205330 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m08:44:46.208785 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m08:44:46.210399 [debug] [MainThread]: Parsing macros/utils/data_types.sql
+[0m08:44:46.219785 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m08:44:46.221081 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m08:44:46.222317 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m08:44:46.224359 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m08:44:46.225719 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+[0m08:44:46.583700 [debug] [MainThread]: 1603: static parser failed on dedup_stocks.sql
+[0m08:44:46.586344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7792f4a126d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7792f4b62ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7792f4b62e90>]}
+[0m08:44:46.586649 [debug] [MainThread]: Flushing usage events
+[0m08:44:47.661675 [error] [MainThread]: Encountered an error:
+Compilation Error in model dedup_stocks (models/dedup_stocks.sql)
+  expected token ',', got 'table'
+    line 4
+      alias='final_table_stocks_clean'   -- new table name
+
+
+============================== 2025-04-06 08:48:13.210574 | 8739028b-a207-486a-8388-0d8d65b10aec ==============================
+[0m08:48:13.210620 [info ] [MainThread]: Running with dbt=1.3.0
+[0m08:48:13.212037 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m08:48:13.212417 [debug] [MainThread]: Tracking: tracking
+[0m08:48:13.214017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b385f62690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b385f72290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b385f72850>]}
+[0m08:48:13.264584 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m08:48:13.265304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '8739028b-a207-486a-8388-0d8d65b10aec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b385e7f150>]}
+[0m08:48:13.294388 [debug] [MainThread]: Parsing macros/adapters.sql
+[0m08:48:13.333756 [debug] [MainThread]: Parsing macros/etc.sql
+[0m08:48:13.337206 [debug] [MainThread]: Parsing macros/catalog.sql
+[0m08:48:13.347022 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+[0m08:48:13.351982 [debug] [MainThread]: Parsing macros/materializations/view.sql
+[0m08:48:13.357057 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+[0m08:48:13.388724 [debug] [MainThread]: Parsing macros/materializations/copy.sql
+[0m08:48:13.393865 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+[0m08:48:13.396832 [debug] [MainThread]: Parsing macros/materializations/table.sql
+[0m08:48:13.409452 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m08:48:13.414133 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m08:48:13.416553 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m08:48:13.418378 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m08:48:13.419612 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m08:48:13.420750 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m08:48:13.421849 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m08:48:13.422594 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m08:48:13.423624 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m08:48:13.424590 [debug] [MainThread]: Parsing macros/utils/timestamps.sql
+[0m08:48:13.426637 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m08:48:13.427827 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m08:48:13.429533 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m08:48:13.430544 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m08:48:13.432877 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m08:48:13.433653 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m08:48:13.434766 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m08:48:13.435831 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m08:48:13.436894 [debug] [MainThread]: Parsing macros/etc/statement.sql
+[0m08:48:13.445966 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+[0m08:48:13.456134 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+[0m08:48:13.458586 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+[0m08:48:13.462507 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+[0m08:48:13.464206 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+[0m08:48:13.476463 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+[0m08:48:13.492623 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+[0m08:48:13.507150 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+[0m08:48:13.518154 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+[0m08:48:13.535551 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+[0m08:48:13.537590 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+[0m08:48:13.539505 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+[0m08:48:13.544057 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+[0m08:48:13.547734 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+[0m08:48:13.553152 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+[0m08:48:13.567751 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+[0m08:48:13.578311 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+[0m08:48:13.586359 [debug] [MainThread]: Parsing macros/materializations/models/incremental/strategies.sql
+[0m08:48:13.593259 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+[0m08:48:13.617306 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+[0m08:48:13.620071 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+[0m08:48:13.624482 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+[0m08:48:13.626881 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+[0m08:48:13.635790 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+[0m08:48:13.639316 [debug] [MainThread]: Parsing macros/python_model/python.sql
+[0m08:48:13.645372 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+[0m08:48:13.713460 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+[0m08:48:13.718250 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+[0m08:48:13.725386 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+[0m08:48:13.727500 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+[0m08:48:13.741682 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+[0m08:48:13.744603 [debug] [MainThread]: Parsing macros/adapters/timestamps.sql
+[0m08:48:13.748219 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+[0m08:48:13.750493 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m08:48:13.764401 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+[0m08:48:13.766112 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+[0m08:48:13.768643 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+[0m08:48:13.770223 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+[0m08:48:13.771092 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+[0m08:48:13.772196 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+[0m08:48:13.773584 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+[0m08:48:13.775067 [debug] [MainThread]: Parsing macros/utils/replace.sql
+[0m08:48:13.776669 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m08:48:13.778071 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m08:48:13.780569 [debug] [MainThread]: Parsing macros/utils/literal.sql
+[0m08:48:13.781607 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m08:48:13.782980 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m08:48:13.784130 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m08:48:13.785317 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m08:48:13.786346 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m08:48:13.787279 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m08:48:13.788469 [debug] [MainThread]: Parsing macros/utils/length.sql
+[0m08:48:13.789515 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m08:48:13.790554 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m08:48:13.791736 [debug] [MainThread]: Parsing macros/utils/cast_bool_to_text.sql
+[0m08:48:13.793474 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m08:48:13.795357 [debug] [MainThread]: Parsing macros/utils/concat.sql
+[0m08:48:13.796484 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m08:48:13.797730 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m08:48:13.799970 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m08:48:13.800906 [debug] [MainThread]: Parsing macros/utils/data_types.sql
+[0m08:48:13.807677 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m08:48:13.808998 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m08:48:13.810157 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m08:48:13.812089 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m08:48:13.813302 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+[0m08:48:14.139221 [debug] [MainThread]: 1603: static parser failed on dedup_stocks.sql
+[0m08:48:14.156053 [debug] [MainThread]: 1602: parser fallback to jinja rendering on dedup_stocks.sql
+[0m08:48:14.157545 [debug] [MainThread]: 1603: static parser failed on dedup_forex.sql
+[0m08:48:14.162283 [debug] [MainThread]: 1602: parser fallback to jinja rendering on dedup_forex.sql
+[0m08:48:14.282066 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8739028b-a207-486a-8388-0d8d65b10aec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b385e4a910>]}
+[0m08:48:14.293372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8739028b-a207-486a-8388-0d8d65b10aec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b3980d7ed0>]}
+[0m08:48:14.293728 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+[0m08:48:14.294135 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8739028b-a207-486a-8388-0d8d65b10aec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b38603b6d0>]}
+[0m08:48:14.295601 [info ] [MainThread]: 
+[0m08:48:14.296505 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m08:48:14.297657 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108"
+[0m08:48:14.298027 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:48:15.084647 [debug] [ThreadPool]: Acquiring new bigquery connection "create_finflow-455108_my_dataset_my_dataset"
+[0m08:48:15.085488 [debug] [ThreadPool]: Acquiring new bigquery connection "create_finflow-455108_my_dataset_my_dataset"
+[0m08:48:15.085897 [debug] [ThreadPool]: Creating schema "_ReferenceKey(database='finflow-455108', schema='my_dataset_my_dataset', identifier=None)"
+[0m08:48:15.104308 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:48:15.149133 [debug] [ThreadPool]: On create_finflow-455108_my_dataset_my_dataset: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "connection_name": "create_finflow-455108_my_dataset_my_dataset"} */
+create schema if not exists `finflow-455108`.`my_dataset_my_dataset`
+  
+[0m08:48:17.093089 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:483dda67-b8a0-4505-bbe0-1fea1d8d5b44:US&page=queryresults
+[0m08:48:17.095003 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108_my_dataset_my_dataset"
+[0m08:48:17.095279 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:48:17.882753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8739028b-a207-486a-8388-0d8d65b10aec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b385f30ad0>]}
+[0m08:48:17.883494 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m08:48:17.883888 [info ] [MainThread]: 
+[0m08:48:17.890872 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_forex
+[0m08:48:17.891242 [info ] [Thread-1  ]: 1 of 2 START sql table model my_dataset_my_dataset.final_table_forex_clean ..... [RUN]
+[0m08:48:17.892445 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_forex"
+[0m08:48:17.892651 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_forex
+[0m08:48:17.892913 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_forex
+[0m08:48:17.898971 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_forex"
+[0m08:48:17.899496 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:48:17.899726 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_forex
+[0m08:48:17.940787 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_forex"
+[0m08:48:17.941758 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m08:48:17.985357 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_forex: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_forex"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset_my_dataset`.`final_table_forex_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH ranked AS (
+  SELECT
+    symbol,
+    local_timestamp,
+    last_refreshed_utc,
+    exchange_rate,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, local_timestamp
+      ORDER BY local_timestamp
+    ) AS rn
+  FROM `finflow-455108`.`my_dataset`.`final_table_forex`
+)
+SELECT
+  symbol,
+  local_timestamp,
+  last_refreshed_utc,
+  exchange_rate
+FROM ranked
+WHERE rn = 1
+    );
+  
+[0m08:48:18.878660 [debug] [Thread-1  ]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_forex"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset_my_dataset`.`final_table_forex_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH ranked AS (
+  SELECT
+    symbol,
+    local_timestamp,
+    last_refreshed_utc,
+    exchange_rate,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, local_timestamp
+      ORDER BY local_timestamp
+    ) AS rn
+  FROM `finflow-455108`.`my_dataset`.`final_table_forex`
+)
+SELECT
+  symbol,
+  local_timestamp,
+  last_refreshed_utc,
+  exchange_rate
+FROM ranked
+WHERE rn = 1
+    );
+  
+[0m08:48:18.878953 [debug] [Thread-1  ]: BigQuery adapter: 404 Not found: Dataset finflow-455108:my_dataset was not found in location US
+
+Location: US
+Job ID: 1b21e5b9-0b23-4449-a412-2a10b4e2cd27
+
+[0m08:48:18.879433 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:48:18.880027 [debug] [Thread-1  ]: Runtime Error in model dedup_forex (models/dedup_forex.sql)
+  404 Not found: Dataset finflow-455108:my_dataset was not found in location US
+  
+  Location: US
+  Job ID: 1b21e5b9-0b23-4449-a412-2a10b4e2cd27
+  
+[0m08:48:18.880310 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8739028b-a207-486a-8388-0d8d65b10aec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b385c34fd0>]}
+[0m08:48:18.880695 [error] [Thread-1  ]: 1 of 2 ERROR creating sql table model my_dataset_my_dataset.final_table_forex_clean  [[31mERROR[0m in 0.99s]
+[0m08:48:18.881261 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_forex
+[0m08:48:18.881606 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_stocks
+[0m08:48:18.882110 [info ] [Thread-1  ]: 2 of 2 START sql table model my_dataset_my_dataset.final_table_stocks_clean .... [RUN]
+[0m08:48:18.883000 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_stocks"
+[0m08:48:18.883242 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_stocks
+[0m08:48:18.883460 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_stocks
+[0m08:48:18.887867 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_stocks"
+[0m08:48:18.888242 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:48:18.888576 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_stocks
+[0m08:48:18.897037 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_stocks"
+[0m08:48:18.897409 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m08:48:18.939392 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_stocks: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_stocks"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset_my_dataset`.`final_table_stocks_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH ranked AS (
+  SELECT
+    symbol,
+    timestamp,
+    open,
+    high,
+    low,
+    close,
+    volume,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, timestamp
+      ORDER BY timestamp
+    ) AS rn
+  FROM  `finflow-455108`.`my_dataset`.`final_table_stocks`
+)
+SELECT
+  symbol,
+  timestamp,
+  open,
+  high,
+  low,
+  close,
+  volume
+FROM ranked
+WHERE rn = 1
+    );
+  
+[0m08:48:19.969105 [debug] [Thread-1  ]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_stocks"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset_my_dataset`.`final_table_stocks_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH ranked AS (
+  SELECT
+    symbol,
+    timestamp,
+    open,
+    high,
+    low,
+    close,
+    volume,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, timestamp
+      ORDER BY timestamp
+    ) AS rn
+  FROM  `finflow-455108`.`my_dataset`.`final_table_stocks`
+)
+SELECT
+  symbol,
+  timestamp,
+  open,
+  high,
+  low,
+  close,
+  volume
+FROM ranked
+WHERE rn = 1
+    );
+  
+[0m08:48:19.969558 [debug] [Thread-1  ]: BigQuery adapter: 404 Not found: Dataset finflow-455108:my_dataset was not found in location US
+
+Location: US
+Job ID: 66092e56-aa6c-405c-ba21-d1dea0ae2855
+
+[0m08:48:19.970246 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:48:19.971199 [debug] [Thread-1  ]: Runtime Error in model dedup_stocks (models/dedup_stocks.sql)
+  404 Not found: Dataset finflow-455108:my_dataset was not found in location US
+  
+  Location: US
+  Job ID: 66092e56-aa6c-405c-ba21-d1dea0ae2855
+  
+[0m08:48:19.971675 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8739028b-a207-486a-8388-0d8d65b10aec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b3858e0850>]}
+[0m08:48:19.972317 [error] [Thread-1  ]: 2 of 2 ERROR creating sql table model my_dataset_my_dataset.final_table_stocks_clean  [[31mERROR[0m in 1.09s]
+[0m08:48:19.973675 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_stocks
+[0m08:48:19.995574 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m08:48:19.996356 [info ] [MainThread]: 
+[0m08:48:19.996926 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 5.70 seconds (5.70s).
+[0m08:48:19.997979 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:48:19.998315 [debug] [MainThread]: Connection 'model.my_dbt_project.dedup_stocks' was properly closed.
+[0m08:48:20.009574 [info ] [MainThread]: 
+[0m08:48:20.010415 [info ] [MainThread]: [31mCompleted with 2 errors and 0 warnings:[0m
+[0m08:48:20.011324 [info ] [MainThread]: 
+[0m08:48:20.012129 [error] [MainThread]: [33mRuntime Error in model dedup_forex (models/dedup_forex.sql)[0m
+[0m08:48:20.012800 [error] [MainThread]:   404 Not found: Dataset finflow-455108:my_dataset was not found in location US
+[0m08:48:20.014339 [error] [MainThread]:   
+[0m08:48:20.015423 [error] [MainThread]:   Location: US
+[0m08:48:20.017863 [error] [MainThread]:   Job ID: 1b21e5b9-0b23-4449-a412-2a10b4e2cd27
+[0m08:48:20.020114 [error] [MainThread]:   
+[0m08:48:20.022212 [info ] [MainThread]: 
+[0m08:48:20.023893 [error] [MainThread]: [33mRuntime Error in model dedup_stocks (models/dedup_stocks.sql)[0m
+[0m08:48:20.025565 [error] [MainThread]:   404 Not found: Dataset finflow-455108:my_dataset was not found in location US
+[0m08:48:20.028673 [error] [MainThread]:   
+[0m08:48:20.029208 [error] [MainThread]:   Location: US
+[0m08:48:20.031506 [error] [MainThread]:   Job ID: 66092e56-aa6c-405c-ba21-d1dea0ae2855
+[0m08:48:20.034096 [error] [MainThread]:   
+[0m08:48:20.034642 [info ] [MainThread]: 
+[0m08:48:20.035179 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=2 SKIP=0 TOTAL=2
+[0m08:48:20.036250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b385c30350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b3858e7e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79b3858e7890>]}
+[0m08:48:20.036677 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-06 08:53:35.309951 | 2615ab8d-ee23-425a-b754-e8adbe27c629 ==============================
+[0m08:53:35.309993 [info ] [MainThread]: Running with dbt=1.3.0
+[0m08:53:35.311319 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m08:53:35.311876 [debug] [MainThread]: Tracking: tracking
+[0m08:53:35.316370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a36ab21f450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a36befa2310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a36befa22d0>]}
+[0m08:53:35.381848 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m08:53:35.382582 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2615ab8d-ee23-425a-b754-e8adbe27c629', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a36ab1433d0>]}
+[0m08:53:35.414465 [debug] [MainThread]: Parsing macros/adapters.sql
+[0m08:53:35.510448 [debug] [MainThread]: Parsing macros/etc.sql
+[0m08:53:35.515752 [debug] [MainThread]: Parsing macros/catalog.sql
+[0m08:53:35.530348 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+[0m08:53:35.534981 [debug] [MainThread]: Parsing macros/materializations/view.sql
+[0m08:53:35.540471 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+[0m08:53:35.572933 [debug] [MainThread]: Parsing macros/materializations/copy.sql
+[0m08:53:35.578114 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+[0m08:53:35.581158 [debug] [MainThread]: Parsing macros/materializations/table.sql
+[0m08:53:35.593554 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m08:53:35.598019 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m08:53:35.600298 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m08:53:35.602137 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m08:53:35.603334 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m08:53:35.604387 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m08:53:35.605405 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m08:53:35.605945 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m08:53:35.606592 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m08:53:35.607155 [debug] [MainThread]: Parsing macros/utils/timestamps.sql
+[0m08:53:35.608396 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m08:53:35.609168 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m08:53:35.610260 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m08:53:35.610941 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m08:53:35.612333 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m08:53:35.612786 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m08:53:35.613511 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m08:53:35.614214 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m08:53:35.614866 [debug] [MainThread]: Parsing macros/etc/statement.sql
+[0m08:53:35.620208 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+[0m08:53:35.628676 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+[0m08:53:35.631088 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+[0m08:53:35.635003 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+[0m08:53:35.636678 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+[0m08:53:35.648927 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+[0m08:53:35.670441 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+[0m08:53:35.682520 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+[0m08:53:35.689849 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+[0m08:53:35.707593 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+[0m08:53:35.709482 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+[0m08:53:35.711454 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+[0m08:53:35.716082 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+[0m08:53:35.719928 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+[0m08:53:35.725532 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+[0m08:53:35.741359 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+[0m08:53:35.751799 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+[0m08:53:35.759949 [debug] [MainThread]: Parsing macros/materializations/models/incremental/strategies.sql
+[0m08:53:35.766844 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+[0m08:53:35.783555 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+[0m08:53:35.785154 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+[0m08:53:35.787540 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+[0m08:53:35.788968 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+[0m08:53:35.794283 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+[0m08:53:35.797718 [debug] [MainThread]: Parsing macros/python_model/python.sql
+[0m08:53:35.803734 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+[0m08:53:35.869288 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+[0m08:53:35.873965 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+[0m08:53:35.882431 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+[0m08:53:35.885492 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+[0m08:53:35.911499 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+[0m08:53:35.916707 [debug] [MainThread]: Parsing macros/adapters/timestamps.sql
+[0m08:53:35.920715 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+[0m08:53:35.923060 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m08:53:35.937595 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+[0m08:53:35.939427 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+[0m08:53:35.942029 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+[0m08:53:35.943626 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+[0m08:53:35.944424 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+[0m08:53:35.945386 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+[0m08:53:35.946313 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+[0m08:53:35.947900 [debug] [MainThread]: Parsing macros/utils/replace.sql
+[0m08:53:35.949558 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m08:53:35.951174 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m08:53:35.953753 [debug] [MainThread]: Parsing macros/utils/literal.sql
+[0m08:53:35.954798 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m08:53:35.956156 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m08:53:35.957326 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m08:53:35.958565 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m08:53:35.959635 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m08:53:35.960570 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m08:53:35.961748 [debug] [MainThread]: Parsing macros/utils/length.sql
+[0m08:53:35.962961 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m08:53:35.964078 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m08:53:35.965678 [debug] [MainThread]: Parsing macros/utils/cast_bool_to_text.sql
+[0m08:53:35.967414 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m08:53:35.969066 [debug] [MainThread]: Parsing macros/utils/concat.sql
+[0m08:53:35.970211 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m08:53:35.971424 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m08:53:35.973548 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m08:53:35.974500 [debug] [MainThread]: Parsing macros/utils/data_types.sql
+[0m08:53:35.981278 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m08:53:35.982465 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m08:53:35.983662 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m08:53:35.985703 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m08:53:35.986936 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+[0m08:53:36.422114 [debug] [MainThread]: 1699: static parser successfully parsed dedup_stocks.sql
+[0m08:53:36.434629 [debug] [MainThread]: 1699: static parser successfully parsed dedup_forex.sql
+[0m08:53:36.495846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2615ab8d-ee23-425a-b754-e8adbe27c629', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a36ab0cec90>]}
+[0m08:53:36.502100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2615ab8d-ee23-425a-b754-e8adbe27c629', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a36ab0c97d0>]}
+[0m08:53:36.502417 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+[0m08:53:36.502795 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2615ab8d-ee23-425a-b754-e8adbe27c629', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a36ab0c96d0>]}
+[0m08:53:36.504169 [info ] [MainThread]: 
+[0m08:53:36.505045 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m08:53:36.506038 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108"
+[0m08:53:36.506345 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:53:37.386109 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108_my_dataset"
+[0m08:53:37.386466 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:53:38.210568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2615ab8d-ee23-425a-b754-e8adbe27c629', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a36ab0a5a10>]}
+[0m08:53:38.211339 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m08:53:38.211755 [info ] [MainThread]: 
+[0m08:53:38.217621 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_forex
+[0m08:53:38.218133 [info ] [Thread-1  ]: 1 of 2 START sql table model my_dataset.final_table_forex_clean ................ [RUN]
+[0m08:53:38.218962 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_forex"
+[0m08:53:38.219183 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_forex
+[0m08:53:38.219497 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_forex
+[0m08:53:38.227422 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_forex"
+[0m08:53:38.227880 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:53:38.228101 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_forex
+[0m08:53:38.278320 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_forex"
+[0m08:53:38.278895 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m08:53:38.321654 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_forex: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_forex"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_forex_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH ranked AS (
+  SELECT
+    symbol,
+    local_timestamp,
+    last_refreshed_utc,
+    exchange_rate,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, local_timestamp
+      ORDER BY local_timestamp
+    ) AS rn
+  FROM `finflow-455108`.`my_dataset`.`final_table_forex`
+)
+SELECT
+  symbol,
+  local_timestamp,
+  last_refreshed_utc,
+  exchange_rate
+FROM ranked
+WHERE rn = 1
+    );
+  
+[0m08:53:42.005921 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:afb7f6ab-4f33-44a2-9903-101a2fb9dbd2:us-central1&page=queryresults
+[0m08:53:42.021326 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:53:42.021977 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2615ab8d-ee23-425a-b754-e8adbe27c629', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a36aaf40490>]}
+[0m08:53:42.022365 [info ] [Thread-1  ]: 1 of 2 OK created sql table model my_dataset.final_table_forex_clean ........... [[32mCREATE TABLE (4.0 rows, 258.0 Bytes processed)[0m in 3.80s]
+[0m08:53:42.022933 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_forex
+[0m08:53:42.023283 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_stocks
+[0m08:53:42.023661 [info ] [Thread-1  ]: 2 of 2 START sql table model my_dataset.final_table_stocks_clean ............... [RUN]
+[0m08:53:42.024507 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_stocks"
+[0m08:53:42.024749 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_stocks
+[0m08:53:42.025006 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_stocks
+[0m08:53:42.028944 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_stocks"
+[0m08:53:42.029394 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:53:42.029635 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_stocks
+[0m08:53:42.032835 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_stocks"
+[0m08:53:42.033254 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m08:53:42.075325 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_stocks: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_stocks"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_stocks_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH ranked AS (
+  SELECT
+    symbol,
+    timestamp,
+    open,
+    high,
+    low,
+    close,
+    volume,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, timestamp
+      ORDER BY timestamp
+    ) AS rn
+  FROM  `finflow-455108`.`my_dataset`.`final_table_stocks`
+)
+SELECT
+  symbol,
+  timestamp,
+  open,
+  high,
+  low,
+  close,
+  volume
+FROM ranked
+WHERE rn = 1
+    );
+  
+[0m08:53:45.807010 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:554f6ff7-a25b-444d-becf-3467a084d0d9:us-central1&page=queryresults
+[0m08:53:45.808949 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:53:45.809713 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2615ab8d-ee23-425a-b754-e8adbe27c629', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a36aaf1a9d0>]}
+[0m08:53:45.810286 [info ] [Thread-1  ]: 2 of 2 OK created sql table model my_dataset.final_table_stocks_clean .......... [[32mCREATE TABLE (300.0 rows, 46.9 KB processed)[0m in 3.79s]
+[0m08:53:45.811169 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_stocks
+[0m08:53:45.835586 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m08:53:45.836148 [info ] [MainThread]: 
+[0m08:53:45.836506 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 9.33 seconds (9.33s).
+[0m08:53:45.837146 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:53:45.837428 [debug] [MainThread]: Connection 'model.my_dbt_project.dedup_stocks' was properly closed.
+[0m08:53:45.844965 [info ] [MainThread]: 
+[0m08:53:45.845356 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:53:45.845917 [info ] [MainThread]: 
+[0m08:53:45.846372 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m08:53:45.846967 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a36aaef93d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a36aafaac90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a36aaea2550>]}
+[0m08:53:45.847337 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-06 12:55:55.134439 | 33cc7be8-1095-4b94-9640-72717bebfffc ==============================
+[0m12:55:55.134493 [info ] [MainThread]: Running with dbt=1.3.0
+[0m12:55:55.202644 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m12:55:55.205204 [debug] [MainThread]: Tracking: tracking
+[0m12:55:55.215509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7524973ad490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7524973ad710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7524973ad550>]}
+[0m12:55:55.932271 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:55:55.941975 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:55:56.078930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '33cc7be8-1095-4b94-9640-72717bebfffc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x752497257210>]}
+[0m12:55:56.161860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '33cc7be8-1095-4b94-9640-72717bebfffc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75249739e650>]}
+[0m12:55:56.165120 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+[0m12:55:56.199683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '33cc7be8-1095-4b94-9640-72717bebfffc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75249739ef90>]}
+[0m12:55:56.228184 [info ] [MainThread]: 
+[0m12:55:56.262392 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m12:55:56.268921 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108"
+[0m12:55:56.269335 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:55:58.355057 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108_my_dataset"
+[0m12:55:58.356120 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:55:59.536886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '33cc7be8-1095-4b94-9640-72717bebfffc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75249d6a0d50>]}
+[0m12:55:59.541338 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:55:59.545650 [info ] [MainThread]: 
+[0m12:55:59.565455 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_forex
+[0m12:55:59.566125 [info ] [Thread-1  ]: 1 of 2 START sql table model my_dataset.final_table_forex_clean ................ [RUN]
+[0m12:55:59.567352 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_forex"
+[0m12:55:59.568166 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_forex
+[0m12:55:59.568632 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_forex
+[0m12:55:59.575738 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_forex"
+[0m12:55:59.577008 [debug] [Thread-1  ]: finished collecting timing info
+[0m12:55:59.577454 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_forex
+[0m12:55:59.648325 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:56:00.780141 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_forex"
+[0m12:56:00.781430 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_forex: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_forex"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_forex_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH ranked AS (
+  SELECT
+    symbol,
+    local_timestamp,
+    last_refreshed_utc,
+    exchange_rate,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, local_timestamp
+      ORDER BY local_timestamp
+    ) AS rn
+  FROM `finflow-455108`.`my_dataset`.`final_table_forex`
+)
+SELECT
+  symbol,
+  local_timestamp,
+  last_refreshed_utc,
+  exchange_rate
+FROM ranked
+WHERE rn = 1
+    );
+  
+[0m12:56:03.686843 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:6f07f23a-162c-405e-a4df-221db53d39eb:us-central1&page=queryresults
+[0m12:56:03.807511 [debug] [Thread-1  ]: finished collecting timing info
+[0m12:56:03.817137 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '33cc7be8-1095-4b94-9640-72717bebfffc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7524ab193b90>]}
+[0m12:56:03.821367 [info ] [Thread-1  ]: 1 of 2 OK created sql table model my_dataset.final_table_forex_clean ........... [[32mCREATE TABLE (4.0 rows, 258.0 Bytes processed)[0m in 4.25s]
+[0m12:56:03.825875 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_forex
+[0m12:56:03.827832 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_stocks
+[0m12:56:03.828458 [info ] [Thread-1  ]: 2 of 2 START sql table model my_dataset.final_table_stocks_clean ............... [RUN]
+[0m12:56:03.837242 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_stocks"
+[0m12:56:03.838907 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_stocks
+[0m12:56:03.839287 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_stocks
+[0m12:56:03.863778 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_stocks"
+[0m12:56:03.865333 [debug] [Thread-1  ]: finished collecting timing info
+[0m12:56:03.866734 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_stocks
+[0m12:56:03.877431 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:56:04.807466 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_stocks"
+[0m12:56:04.813058 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_stocks: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_stocks"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_stocks_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH ranked AS (
+  SELECT
+    symbol,
+    timestamp,
+    open,
+    high,
+    low,
+    close,
+    volume,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, timestamp
+      ORDER BY timestamp
+    ) AS rn
+  FROM  `finflow-455108`.`my_dataset`.`final_table_stocks`
+)
+SELECT
+  symbol,
+  timestamp,
+  open,
+  high,
+  low,
+  close,
+  volume
+FROM ranked
+WHERE rn = 1
+    );
+  
+[0m12:56:07.455884 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:a84c50f1-fb46-4441-b53a-fbe5eff352c8:us-central1&page=queryresults
+[0m12:56:07.459453 [debug] [Thread-1  ]: finished collecting timing info
+[0m12:56:07.461730 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '33cc7be8-1095-4b94-9640-72717bebfffc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x752497495c50>]}
+[0m12:56:07.462883 [info ] [Thread-1  ]: 2 of 2 OK created sql table model my_dataset.final_table_stocks_clean .......... [[32mCREATE TABLE (300.0 rows, 46.9 KB processed)[0m in 3.63s]
+[0m12:56:07.464437 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_stocks
+[0m12:56:07.510917 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m12:56:07.514217 [info ] [MainThread]: 
+[0m12:56:07.516676 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 11.28 seconds (11.28s).
+[0m12:56:07.519806 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:56:07.521514 [debug] [MainThread]: Connection 'list_finflow-455108' was properly closed.
+[0m12:56:07.522824 [debug] [MainThread]: Connection 'model.my_dbt_project.dedup_stocks' was properly closed.
+[0m12:56:07.568114 [info ] [MainThread]: 
+[0m12:56:07.572394 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:56:07.574434 [info ] [MainThread]: 
+[0m12:56:07.576537 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m12:56:07.580209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7524972fbfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7524973610d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x752497361490>]}
+[0m12:56:07.581713 [debug] [MainThread]: Flushing usage events

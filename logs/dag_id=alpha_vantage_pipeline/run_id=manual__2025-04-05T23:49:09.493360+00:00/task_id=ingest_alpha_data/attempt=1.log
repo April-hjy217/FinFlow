@@ -1,0 +1,28 @@
+[2025-04-05T23:49:11.263+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: alpha_vantage_pipeline.ingest_alpha_data manual__2025-04-05T23:49:09.493360+00:00 [queued]>
+[2025-04-05T23:49:11.271+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: alpha_vantage_pipeline.ingest_alpha_data manual__2025-04-05T23:49:09.493360+00:00 [queued]>
+[2025-04-05T23:49:11.271+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-05T23:49:11.271+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2025-04-05T23:49:11.271+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-05T23:49:11.287+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): ingest_alpha_data> on 2025-04-05 23:49:09.493360+00:00
+[2025-04-05T23:49:11.295+0000] {standard_task_runner.py:55} INFO - Started process 225 to run task
+[2025-04-05T23:49:11.298+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'alpha_vantage_pipeline', 'ingest_alpha_data', 'manual__2025-04-05T23:49:09.493360+00:00', '--job-id', '221', '--raw', '--subdir', 'DAGS_FOLDER/alpha_vantage_pipeline.py', '--cfg-path', '/tmp/tmp_x_w3r5u']
+[2025-04-05T23:49:11.299+0000] {standard_task_runner.py:83} INFO - Job 221: Subtask ingest_alpha_data
+[2025-04-05T23:49:11.356+0000] {task_command.py:388} INFO - Running <TaskInstance: alpha_vantage_pipeline.ingest_alpha_data manual__2025-04-05T23:49:09.493360+00:00 [running]> on host cb03ac813080
+[2025-04-05T23:49:11.422+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=alpha_vantage_pipeline
+AIRFLOW_CTX_TASK_ID=ingest_alpha_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-05T23:49:09.493360+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-04-05T23:49:09.493360+00:00
+[2025-04-05T23:49:11.817+0000] {logging_mixin.py:137} INFO - [WARN] USO no data or error: {'Information': 'We have detected your API key as 9FYNWTAWK35E5BHA and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.'}
+[2025-04-05T23:49:12.070+0000] {logging_mixin.py:137} INFO - [WARN] AAPL no data or error: {'Information': 'We have detected your API key as 9FYNWTAWK35E5BHA and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.'}
+[2025-04-05T23:49:12.323+0000] {logging_mixin.py:137} INFO - [WARN] QQQ no data or error: {'Information': 'We have detected your API key as 9FYNWTAWK35E5BHA and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.'}
+[2025-04-05T23:49:12.570+0000] {logging_mixin.py:137} INFO - [WARN] AUD/CNY no real-time data: {'Information': 'We have detected your API key as 9FYNWTAWK35E5BHA and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.'}
+[2025-04-05T23:49:12.860+0000] {logging_mixin.py:137} INFO - [WARN] USD/CNY no real-time data: {'Information': 'We have detected your API key as 9FYNWTAWK35E5BHA and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.'}
+[2025-04-05T23:49:12.861+0000] {python.py:177} INFO - Done. Returned value was: None
+[2025-04-05T23:49:12.871+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=alpha_vantage_pipeline, task_id=ingest_alpha_data, execution_date=20250405T234909, start_date=20250405T234911, end_date=20250405T234912
+[2025-04-05T23:49:12.914+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2025-04-05T23:49:12.941+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

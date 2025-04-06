@@ -1,0 +1,23 @@
+[2025-04-05T07:01:03.863+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: alpha_vantage_pipeline.spark_transform scheduled__2025-04-05T06:30:00+00:00 [queued]>
+[2025-04-05T07:01:03.925+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: alpha_vantage_pipeline.spark_transform scheduled__2025-04-05T06:30:00+00:00 [queued]>
+[2025-04-05T07:01:03.929+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-05T07:01:03.929+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2025-04-05T07:01:03.930+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-05T07:01:04.010+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): spark_transform> on 2025-04-05 06:30:00+00:00
+[2025-04-05T07:01:04.079+0000] {standard_task_runner.py:55} INFO - Started process 244 to run task
+[2025-04-05T07:01:04.087+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'alpha_vantage_pipeline', 'spark_transform', 'scheduled__2025-04-05T06:30:00+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/alpha_vantage_pipeline.py', '--cfg-path', '/tmp/tmpclc2xo4b']
+[2025-04-05T07:01:04.104+0000] {standard_task_runner.py:83} INFO - Job 27: Subtask spark_transform
+[2025-04-05T07:01:04.349+0000] {task_command.py:388} INFO - Running <TaskInstance: alpha_vantage_pipeline.spark_transform scheduled__2025-04-05T06:30:00+00:00 [running]> on host 4cd87f052cac
+[2025-04-05T07:01:04.620+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=alpha_vantage_pipeline
+AIRFLOW_CTX_TASK_ID=spark_transform
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-05T06:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-04-05T06:30:00+00:00
+[2025-04-05T07:01:13.112+0000] {python.py:177} INFO - Done. Returned value was: None
+[2025-04-05T07:01:13.133+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=alpha_vantage_pipeline, task_id=spark_transform, execution_date=20250405T063000, start_date=20250405T070103, end_date=20250405T070113
+[2025-04-05T07:01:13.190+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2025-04-05T07:01:13.250+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
