@@ -21,7 +21,7 @@ Hence, this project aims to build a **scalable pipeline** that:
 3. **Stores** raw CSVs in **Google Cloud Storage (GCS)**.
 4. **Transforms** them using **Spark** (batch processing) and **dbt** (for final cleaning/deduplication).
 5. **Loads** final tables into **BigQuery**.
-6. **Visualizes** the results in **Metabase** (or Looker Studio) for insights on currency movements (AUD/CNY, USD/CNY) and stock/ETF performance (USO, AAPL, QQQ).
+6. **Visualizes** the results in **Metabase** for insights on currency movements (AUD/CNY, USD/CNY) and stock/ETF performance (USO, AAPL, QQQ).
 
 ---
 
@@ -95,13 +95,6 @@ analysis_task = PythonOperator(
 ingestion_task >> spark_task >> dbt_task >> [load_task_stocks, load_task_forex] >> analysis_task
 
 ```
-
-- **Ingestion**: Pulls data from Alpha Vantage → CSV in GCS
-- **Spark**: (Optional) for batch transformations
-- **dbt**: Creates deduplicated tables in BigQuery
-- **Load**: If needed, uses `GCSToBigQueryOperator` to move data
-- **Analysis**: Final Python task or any custom logic
-
 ---
 
 ## 4. dbt Deduplication Models
@@ -109,7 +102,7 @@ ingestion_task >> spark_task >> dbt_task >> [load_task_stocks, load_task_forex] 
 - **`dedup_stocks.sql`**
 - **`dedup_forex.sql`**
 
-These read from raw or final tables and produce **`final_table_stocks_clean`** / **`final_table_forex_clean`** with duplicates removed.
+These read from final tables and produce **`final_table_stocks_clean`** / **`final_table_forex_clean`** with duplicates removed.
 
 ---
 
@@ -126,9 +119,8 @@ These read from raw or final tables and produce **`final_table_stocks_clean`** /
 1. **Clone** the repo:
     
     ```bash
-    bash
-    CopyEdit
-    git clone https://github.com/YourUsername/finflow.git
+
+    git clone https://github.com/.../finflow.git
     cd finflow
     
     ```
@@ -136,8 +128,6 @@ These read from raw or final tables and produce **`final_table_stocks_clean`** /
 2. **Create** an `.env` file, filling in real values:
     
     ```
-    ini
-    CopyEdit
     ALPHA_VANTAGE_API_KEY=YOUR_REAL_KEY
     GCP_PROJECT_ID=your-project
     GCP_DATASET_ID=my_dataset
@@ -149,8 +139,6 @@ These read from raw or final tables and produce **`final_table_stocks_clean`** /
 4. **Build & Run** containers:
     
     ```bash
-    bash
-    CopyEdit
     cd docker
     docker-compose build
     docker-compose up -d
@@ -162,7 +150,6 @@ These read from raw or final tables and produce **`final_table_stocks_clean`** /
 
 - Go to [http://localhost:8080](http://localhost:8080/) (user: `admin`, pass: `admin`).
 - Turn on `alpha_vantage_pipeline`.
-- The pipeline ingests data, runs Spark (if configured), calls dbt, and populates BigQuery.
 
 ---
 
@@ -170,7 +157,6 @@ These read from raw or final tables and produce **`final_table_stocks_clean`** /
 
 - **URL**: [http://localhost:3000](http://localhost:3000/)
 - Connect Metabase to BigQuery → see `final_table_stocks_clean` and `final_table_forex_clean`.
-- Build charts for daily closes, day-over-day changes, or multi-series comparisons (e.g., USO vs. AUD/CNY).
 
 ---
 
