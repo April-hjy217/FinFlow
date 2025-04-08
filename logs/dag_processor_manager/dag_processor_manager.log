@@ -13563,3 +13563,54 @@ File Path                                    PID    Runtime      # DAGs    # Err
 /opt/airflow/dags/test_gcs_dag.py                                     1           0  0.09s           2025-04-06T14:14:00
 ================================================================================
 [2025-04-06T14:14:38.519+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-04-08T13:10:47.834+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2025-04-08T13:10:47.878+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-04-08T13:10:47.881+0000] {manager.py:486} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-04-08T13:10:47.882+0000] {manager.py:726} INFO - Searching for files in /opt/airflow/dags
+[2025-04-08T13:10:48.026+0000] {manager.py:729} INFO - There are 2 files in /opt/airflow/dags
+[2025-04-08T13:10:48.753+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/alpha_vantage_pipeline.py    160  0.44s             0           0
+/opt/airflow/dags/test_gcs_dag.py              163  0.35s             0           0
+================================================================================
+[2025-04-08T13:11:18.836+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/alpha_vantage_pipeline.py                           1           0  13.32s          2025-04-08T13:11:01
+/opt/airflow/dags/test_gcs_dag.py                                     1           0  3.65s           2025-04-08T13:10:52
+================================================================================
+[2025-04-08T13:11:49.693+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/alpha_vantage_pipeline.py                           1           0  1.80s           2025-04-08T13:11:33
+/opt/airflow/dags/test_gcs_dag.py                                     1           0  0.37s           2025-04-08T13:11:22
+================================================================================
+[2025-04-08T13:12:19.718+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/alpha_vantage_pipeline.py                           1           0  0.78s           2025-04-08T13:12:04
+/opt/airflow/dags/test_gcs_dag.py                                     1           0  0.11s           2025-04-08T13:11:53
+================================================================================
+[2025-04-08T13:12:49.874+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/alpha_vantage_pipeline.py                           1           0  0.74s           2025-04-08T13:12:35
+/opt/airflow/dags/test_gcs_dag.py                                     1           0  0.14s           2025-04-08T13:12:24
+================================================================================
+[2025-04-08T13:13:09.922+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15

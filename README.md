@@ -1,6 +1,6 @@
 # FinFlow Data Pipeline
 
-A data engineering project using **Alpha Vantage** APIs, **Airflow**, **Spark**, **dbt**, and **BigQuery** to ingest, transform, and analyze financial data—such as **Forex** (AUD/CNY, USD/CNY) and **stocks** (AAPL, QQQ, USO). This pipeline stores raw data in GCS, processes it via Spark/dbt, and loads deduplicated, final tables into BigQuery for analytics. A **Metabase** or **Looker Studio** dashboard can then visualize insights.
+A data engineering project using **Alpha Vantage** APIs, **Airflow**, **Spark**, **dbt**, and **BigQuery** to ingest, transform, and analyze financial data—such as **Forex** (AUD/CNY, USD/CNY) and **stocks** (AAPL, QQQ, USO). This pipeline stores raw data in GCS, processes it via Spark/dbt, and loads deduplicated, final tables into BigQuery for analytics. A **Metabase** dashboard can then visualize insights.
 
 ---
 
@@ -43,9 +43,6 @@ FinFlow
 │   │   ├── dedup_stocks.sql
 │   ├── sources.yml                # references final_table_forex, final_table_stocks
 │   └── target/
-├── docker/                       # .env is also ignored
-│   ├── docker-compose.yml         # defines Postgres, pgAdmin, Airflow, Spark, Metabase
-│   ├── Dockerfile_airflow         # Dockerfile for custom Airflow image
 ├── logs/                          # Airflow logs or custom logging
 ├── scripts/
 │   ├── alpha_vantage_ingestion.py # Python script to fetch data from Alpha Vantage
@@ -55,6 +52,8 @@ FinFlow
 │   ├── variables.tf
 │   └── outputs.tf
 ├── .gitignore
+|── docker-compose.yml         # defines Postgres, pgAdmin, Airflow, Spark, Metabase 
+├── Dockerfile_airflow         # Dockerfile for custom Airflow image
 ├── README.md                      # instructions & overview
 └── requirements.txt              # Python dependencies
 

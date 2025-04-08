@@ -5,3 +5,11 @@
 credentials/*.json
 
 docker/postgres-data/
+
+terraform/.terraform/
+
+metabase-data/metabase.db/
+
+logs/
+
+postgres-data/

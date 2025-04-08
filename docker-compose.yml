@@ -33,8 +33,8 @@ services:
   # 3) airflow 
   airflow:
     build:
-      context: ..
-      dockerfile: docker/Dockerfile_airflow
+      context: .
+      dockerfile: Dockerfile_airflow
     image: my_airflow_custom
     depends_on:
       - postgres
@@ -68,12 +68,12 @@ services:
       exec airflow scheduler
       "
     volumes:
-      - ../dags:/opt/airflow/dags
-      - ../logs:/opt/airflow/logs
-      - ../scripts:/opt/airflow/scripts
-      - ../plugins:/opt/airflow/plugins
-      - ../credentials/key.json:/opt/airflow/credentials/key.json
-      - ../dbt:/opt/airflow/dbt
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./scripts:/opt/airflow/scripts
+      - ./plugins:/opt/airflow/plugins
+      - ./credentials/key.json:/opt/airflow/credentials/key.json
+      - ./dbt:/opt/airflow/dbt
 
   # 5) Webserver 
   airflow-webserver:
@@ -98,12 +98,12 @@ services:
       exec airflow webserver --port 8080
       "
     volumes:
-      - ../dags:/opt/airflow/dags
-      - ../logs:/opt/airflow/logs
-      - ../scripts:/opt/airflow/scripts
-      - ../plugins:/opt/airflow/plugins
-      - ../credentials/key.json:/opt/airflow/credentials/key.json
-      - ../dbt:/opt/airflow/dbt
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./scripts:/opt/airflow/scripts
+      - ./plugins:/opt/airflow/plugins
+      - ./credentials/key.json:/opt/airflow/credentials/key.json
+      - ./dbt:/opt/airflow/dbt
 
   # 6) Triggerer
   airflow-triggerer:
@@ -126,12 +126,12 @@ services:
       exec airflow triggerer
       "
     volumes:
-      - ../dags:/opt/airflow/dags
-      - ../logs:/opt/airflow/logs
-      - ../scripts:/opt/airflow/scripts
-      - ../plugins:/opt/airflow/plugins
-      - ../credentials/key.json:/opt/airflow/credentials/key.json
-      - ../dbt:/opt/airflow/dbt
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./scripts:/opt/airflow/scripts
+      - ./plugins:/opt/airflow/plugins
+      - ./credentials/key.json:/opt/airflow/credentials/key.json
+      - ./dbt:/opt/airflow/dbt
 
 
   # 7) Spark Master
