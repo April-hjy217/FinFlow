@@ -28,134 +28,48 @@ Hence, this project aims to build a **scalable pipeline** that:
 ## 2. Project Structure
 
 ```
-graphql
-CopyEdit
 FinFlow
-├── credentials/                # *EXCLUDED from GitHub (contains key.json)
+├── credentials/                  # Contains service account key.json (excluded from Git)
+│   └── key.json
 ├── dags/
-│   ├── alpha_vantage_pipeline.py   # Airflow DAG for ingestion + transformations
-│   └── test_gcs_dag.py             # DAG for testing GCS
+│   └── alpha_vantage_pipeline.py # Main Airflow DAG
 ├── dbt/
-│   ├── dbt_project.yml
-│   ├── profiles.yml
+│   ├── dbt_packages/
+│   ├── logs/
 │   ├── models/
 │   │   ├── dedup_forex.sql
 │   │   ├── dedup_stocks.sql
-│   ├── sources.yml                # references final_table_forex, final_table_stocks
+│   ├── sources.yml               # dbt sources referencing 'transformed_data' or older final tables
+│   ├── dbt_project.yml
+│   ├── profiles.yml
 │   └── target/
-├── logs/                          # Airflow logs or custom logging
-├── scripts/
-│   ├── alpha_vantage_ingestion.py # Python script to fetch data from Alpha Vantage
-│   ├── transform_data.py          # might use it later
+├── images/
+│   └── Metabase.png             # screenshot for README
+├── logs/                         # Airflow logs or custom logs
+├── metabase-data/               # Metabase persistent data
+├── plugins/
+├── postgres-data/               # Postgres persistent data
+├── src/
+│   ├── alpha_vantage_api.py
+│   ├── ingest_forex.py
+│   ├── ingest_stock.py
+│   ├── transform_data.py        # Spark job to unify + transform data
+│   └── upload_gcs.py            # helper for uploading DataFrame to GCS
 ├── terraform/
 │   ├── main.tf
 │   ├── variables.tf
 │   └── outputs.tf
+├── .env                          # environment variables
 ├── .gitignore
-|── docker-compose.yml         # defines Postgres, pgAdmin, Airflow, Spark, Metabase 
-├── Dockerfile_airflow         # Dockerfile for custom Airflow image
-├── README.md                      # instructions & overview
-└── requirements.txt              # Python dependencies
+├── docker-compose.yml            # Defines services: Airflow, Spark, Metabase, Postgres
+├── Dockerfile_airflow            # Custom Airflow image
+├── Dockerfile_spark              # Custom Spark image
+├── requirements.txt              # Python dependencies
+└── README.md                     # This file
 
 ```
 
 ---
-
-## 3. Airflow ETL Pipeline
-
-**`alpha_vantage_pipeline.py`** is the main DAG, which orchestrates these tasks:
-
-```python
-python
-CopyEdit
-ingestion_task = PythonOperator(
-    task_id="ingest_alpha_data",
-    python_callable=fetch_alpha_data,  # calls alpha_vantage_ingestion.py
-)
-
-spark_task = PythonOperator(
-    task_id="spark_transform",
-    python_callable=spark_transform,   # calls transform_data.py
-)
-
-dbt_task = PythonOperator(
-    task_id="dbt_run",
-    python_callable=dbt_run,
-)
-
-load_task_stocks = GCSToBigQueryOperator(...)
-load_task_forex  = GCSToBigQueryOperator(...)
-
-analysis_task = PythonOperator(
-    task_id='analysis_task',
-    python_callable=do_analysis,
-)
-
-ingestion_task >> spark_task >> dbt_task >> [load_task_stocks, load_task_forex] >> analysis_task
-
-```
----
-
-## 4. dbt Deduplication Models
-
-- **`dedup_stocks.sql`**
-- **`dedup_forex.sql`**
-
-These read from final tables and produce **`final_table_stocks_clean`** / **`final_table_forex_clean`** with duplicates removed.
-
----
-
-## 5. Deployment & Execution
-
-### Prerequisites
-
-- **Docker Compose** installed locally.
-- A **GCP Project** with a **BigQuery** dataset & GCS bucket.
-- **Alpha Vantage** API key for real data.
-
-### Steps
-
-1. **Clone** the repo:
-    
-    ```bash
-
-    git clone https://github.com/.../finflow.git
-    cd finflow
-    
-    ```
-    
-2. **Create** an `.env` file, filling in real values:
-    
-    ```
-    ALPHA_VANTAGE_API_KEY=YOUR_REAL_KEY
-    GCP_PROJECT_ID=your-project
-    GCP_DATASET_ID=my_dataset
-    DATA_LAKE_BUCKET=your-gcs-bucket
-    
-    ```
-    
-3. **Place** your real service account `key.json` in `credentials/`.
-4. **Build & Run** containers:
-    
-    ```bash
-    cd docker
-    docker-compose build
-    docker-compose up -d
-    
-    ```
-    
-
-### Airflow
-
-- Go to [http://localhost:8080](http://localhost:8080/) (user: `admin`, pass: `admin`).
-- Turn on `alpha_vantage_pipeline`.
-
----
-
-## 6. Viewing Dashboard (Metabase)
-
-- **URL**: [http://localhost:3000](http://localhost:3000/)
-- Connect Metabase to BigQuery → see `final_table_stocks_clean` and `final_table_forex_clean`.
 
 ---
 
