@@ -2,10 +2,8 @@ version: 2
 
 sources:
   - name: my_source
-    database: "{{ env_var('GCP_PROJECT_ID') }}"  
-    schema: "{{ env_var('GCP_DATASET_ID') }}"  
+    database: "{{ env_var('GCP_PROJECT_ID') }}"
+    schema: "{{ env_var('GCP_DATASET_ID') }}"
     tables:
-      - name: final_table_stocks
-        identifier: final_table_stocks
-      - name: final_table_forex
-        identifier: final_table_forex
+      - name: transformed_data
+        identifier: transformed_data

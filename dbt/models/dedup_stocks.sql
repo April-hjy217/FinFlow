@@ -1,5 +1,5 @@
 {{ config(
-    materialized='table',   
+    materialized='table',
     alias='final_table_stocks_clean'
 )}}
 
@@ -16,7 +16,8 @@ WITH ranked AS (
       PARTITION BY symbol, timestamp
       ORDER BY timestamp
     ) AS rn
-  FROM  {{ source('my_source', 'final_table_stocks') }}
+  FROM {{ source('my_source', 'transformed_data') }}
+  WHERE data_type = 'equity'
 )
 SELECT
   symbol,

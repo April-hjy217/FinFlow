@@ -5,8 +5,12 @@ from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOpe
 from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQueryOperator
 from datetime import datetime, timedelta
 import os
-# from airflow.operators.short_circuit import ShortCircuitOperator
-from scripts.alpha_vantage_ingestion import fetch_alpha_data
+
+from src.alpha_vantage_api import call_alpha_vantage
+from src.ingest_stock import fetch_equities_data
+from src.ingest_forex import fetch_forex_data
+from src.upload_gcs import upload_df_to_gcs
+
 
 def spark_transform(**kwargs):
 
@@ -14,9 +18,24 @@ def spark_transform(**kwargs):
     cmd = [
         "spark-submit",
         "--master", "spark://spark-master:7077",
-        "/opt/airflow/scripts/transform_data.py"
+        "--jars", "/opt/spark/jars/gcs-connector-hadoop3-latest.jar",
+        "/opt/airflow/src/transform_data.py"
     ]
-    subprocess.run(cmd, check=True)
+    try:
+        # Capture logs from stdout / stderr
+        result = subprocess.run(
+            cmd,
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+    except subprocess.CalledProcessError as e:
+        # Print them in Airflow logs, so you can see the real error
+        print("----- STDOUT -----")
+        print(e.stdout.decode(errors="replace"))
+        print("----- STDERR -----")
+        print(e.stderr.decode(errors="replace"))
+        raise
 
 def dbt_run(**kwargs):
     import subprocess
@@ -25,7 +44,21 @@ def dbt_run(**kwargs):
         "--profiles-dir", "/opt/airflow/dbt",  
         "--project-dir", "/opt/airflow/dbt"
     ]
-    subprocess.run(cmd, check=True)
+    try:
+        proc = subprocess.run(
+            cmd,
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        print("DBT STDOUT:", proc.stdout.decode("utf-8", errors="replace"))
+    except subprocess.CalledProcessError as e:
+        # Print both stdout/stderr so we see the real error message
+        print("----- DBT STDOUT -----")
+        print(e.stdout.decode("utf-8", errors="replace"))
+        print("----- DBT STDERR -----")
+        print(e.stderr.decode("utf-8", errors="replace"))
+        raise
 
 
 def do_analysis(**kwargs):
@@ -39,7 +72,7 @@ def do_analysis(**kwargs):
 
     bq_client = bigquery.Client()
 
-    # 1) Stocks Table
+    # 1) Stocks
     stocks_query = f"""
     SELECT 
       symbol, 
@@ -52,7 +85,7 @@ def do_analysis(**kwargs):
     for row in stock_rows:
         print(f"Symbol={row.symbol},  AvgClose={row.avg_close}")
 
-    # 2) Forex Table
+    # 2) Forex
     forex_query = f"""
     SELECT 
       symbol, 
@@ -65,6 +98,11 @@ def do_analysis(**kwargs):
     for row in forex_rows:
         print(f"Symbol={row.symbol},  AvgFX={row.avg_fx}")
 
+
+# ----------------------------------------
+#  Airflow DAG 
+# ----------------------------------------
+
 default_args = {
     'owner': 'airflow',
     'start_date': datetime(2023,1,1),
@@ -74,20 +112,87 @@ default_args = {
 
 dag = DAG(
     dag_id="alpha_vantage_pipeline",
-    # 4 times a day at 08:00, 12:00, 16:00, 20:00
     schedule_interval="0 8,12,16,20 * * *",
     default_args=default_args,
     catchup=False
 )
 
-# 1) Ingestion task
-ingestion_task = PythonOperator(
-    task_id="ingest_alpha_data",
-    python_callable=fetch_alpha_data,
+# 1) Ingestion stocks
+def ingest_stocks(**kwargs):
+
+    df_stocks = fetch_equities_data(
+        api_key=os.environ["ALPHA_VANTAGE_API_KEY"],
+        symbols=["AAPL", "QQQ", "USO"], 
+        interval="30min",
+        outputsize="full"             
+    )
+    kwargs['ti'].xcom_push(key='stocks_df', value=df_stocks.to_json())
+
+ingest_stocks_task = PythonOperator(
+    task_id="ingest_stocks",
+    python_callable=ingest_stocks,
+    provide_context=True,
     dag=dag
 )
 
-# 2) Spark transformation
+
+#  2) Ingestion Forex
+def ingest_fx(**kwargs):
+    df_forex = fetch_forex_data(
+        api_key=os.environ["ALPHA_VANTAGE_API_KEY"],
+        fx_pairs=["AUD/CNY", "USD/CNY"], 
+        outputsize="full"
+    )
+    kwargs['ti'].xcom_push(key='forex_df', value=df_forex.to_json())
+
+ingest_fx_task = PythonOperator(
+    task_id="ingest_fx",
+    python_callable=ingest_fx,
+    provide_context=True,
+    dag=dag
+)
+
+
+# 3) Upload stocks to GCS
+def upload_stocks(**kwargs):
+    import pandas as pd
+    df_json = kwargs['ti'].xcom_pull(task_ids='ingest_stocks', key='stocks_df')
+    if df_json:
+        df = pd.read_json(df_json)
+
+        upload_df_to_gcs(df, bucket_name=os.environ["DATA_LAKE_BUCKET"], 
+                         prefix="raw/alpha_vantage", 
+                         file_format="csv")
+
+upload_stocks_task = PythonOperator(
+    task_id="upload_stocks",
+    python_callable=upload_stocks,
+    provide_context=True,
+    dag=dag
+)
+
+
+#  4) Upload forex to GCS 
+def upload_fx(**kwargs):
+    import pandas as pd
+    df_json = kwargs['ti'].xcom_pull(task_ids='ingest_fx', key='forex_df')
+    if df_json:
+        df = pd.read_json(df_json)
+        from src.upload_gcs import upload_df_to_gcs
+        upload_df_to_gcs(df, bucket_name=os.environ["DATA_LAKE_BUCKET"], 
+                         prefix="raw/alpha_vantage", 
+                         file_format="csv")
+
+upload_fx_task = PythonOperator(
+    task_id="upload_fx",
+    python_callable=upload_fx,
+    provide_context=True,
+    dag=dag
+)
+
+
+
+# 5) Spark transformation
 spark_task = PythonOperator(
     task_id="spark_transform",
     python_callable=spark_transform,
@@ -95,7 +200,7 @@ spark_task = PythonOperator(
 )
 
 
-# 3) dbt run
+# 6) dbt run
 dbt_task = PythonOperator(
     task_id="dbt_run",
     python_callable=dbt_run,
@@ -103,41 +208,41 @@ dbt_task = PythonOperator(
 )
 
 
+   
+# 7) Load to BigQuery
 
-# # 4)check_forex_files
-# check_forex_files = ShortCircuitOperator(
-#     task_id='check_forex_files',
-#     python_callable=check_gcs_forex,
-#     dag=dag
-# )
-
-
-
-
-project_id = os.environ["GCP_PROJECT_ID"]     
-dataset_id = os.environ["GCP_DATASET_ID"]   
-# 4) Load to BigQuery
-load_stocks = GCSToBigQueryOperator(
-    task_id='load_stocks',
-    bucket = os.environ["DATA_LAKE_BUCKET"],
-    source_objects=['raw/alpha_vantage/USO/*.csv', 'raw/alpha_vantage/AAPL/*.csv', 'raw/alpha_vantage/QQQ/*.csv'],
-    destination_project_dataset_table=f"{project_id}.{dataset_id}.final_table_stocks",
-    source_format='CSV',
-    autodetect=True,
+load_transformed_data = GCSToBigQueryOperator(
+    task_id='load_transformed_data',
+    bucket=os.environ["DATA_LAKE_BUCKET"],
+    source_objects=['transformed_data/*.parquet'],
+    destination_project_dataset_table=f"{os.environ['GCP_PROJECT_ID']}.{os.environ['GCP_DATASET_ID']}.transformed_data",
+    source_format='PARQUET',
     write_disposition='WRITE_TRUNCATE',
     dag=dag
 )
 
-load_forex = GCSToBigQueryOperator(
-    task_id='load_forex',
-    bucket = os.environ["DATA_LAKE_BUCKET"],
-    source_objects=['raw/alpha_vantage/AUD_CNY/*.csv', 'raw/alpha_vantage/USD_CNY/*.csv'],
-    destination_project_dataset_table=f"{project_id}.{dataset_id}.final_table_forex",
-    source_format='CSV',
-    autodetect=True,
-    write_disposition='WRITE_APPEND',
-    dag=dag
-)
+
+# load_stocks = GCSToBigQueryOperator(
+#     task_id='load_stocks',
+#     bucket = os.environ["DATA_LAKE_BUCKET"],
+#     source_objects=['raw/alpha_vantage/USO/*.csv', 'raw/alpha_vantage/AAPL/*.csv', 'raw/alpha_vantage/QQQ/*.csv'],
+#     destination_project_dataset_table=f"{project_id}.{dataset_id}.final_table_stocks",
+#     source_format='CSV',
+#     autodetect=True,
+#     write_disposition='WRITE_TRUNCATE',
+#     dag=dag
+# )
+
+# load_forex = GCSToBigQueryOperator(
+#     task_id='load_forex',
+#     bucket = os.environ["DATA_LAKE_BUCKET"],
+#     source_objects=['raw/alpha_vantage/AUD_CNY/*.csv', 'raw/alpha_vantage/USD_CNY/*.csv'],
+#     destination_project_dataset_table=f"{project_id}.{dataset_id}.final_table_forex",
+#     source_format='CSV',
+#     autodetect=True,
+#     write_disposition='WRITE_APPEND',
+#     dag=dag
+# )
 
 # 5) Analysis / final query
 analysis_task = PythonOperator(
@@ -147,8 +252,9 @@ analysis_task = PythonOperator(
 )
 
 # Define task dependencies in a chain
-# ingestion_task >> spark_task >> dbt_task
-# dbt_task >> load_stocks >> analysis_task
-# dbt_task >> check_forex_files >> load_forex >> analysis_task
+ingest_stocks_task >> upload_stocks_task
+ingest_fx_task >> upload_fx_task
 
-ingestion_task >> spark_task >> dbt_task >> [load_stocks, load_forex] >> analysis_task
+[upload_stocks_task, upload_fx_task] >> spark_task
+
+spark_task >> load_transformed_data >> dbt_task >> analysis_task

@@ -22,7 +22,8 @@ WITH ranked AS (
       PARTITION BY symbol, timestamp
       ORDER BY timestamp
     ) AS rn
-  FROM  `finflow-455108`.`my_dataset`.`final_table_stocks`
+  FROM `finflow-455108`.`my_dataset`.`transformed_data`
+  WHERE data_type = 'equity'
 )
 SELECT
   symbol,

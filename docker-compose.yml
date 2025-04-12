@@ -35,7 +35,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile_airflow
-    image: my_airflow_custom
+    image: my-airflow-image
     depends_on:
       - postgres
     environment:
@@ -49,7 +49,7 @@ services:
 
   # 4) Scheduler 
   airflow-scheduler:
-    image: my_airflow_custom
+    image: my-airflow-image
     depends_on:
       - postgres
       - airflow
@@ -70,14 +70,14 @@ services:
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
-      - ./scripts:/opt/airflow/scripts
+      - ./src:/opt/airflow/src
       - ./plugins:/opt/airflow/plugins
       - ./credentials/key.json:/opt/airflow/credentials/key.json
       - ./dbt:/opt/airflow/dbt
 
   # 5) Webserver 
   airflow-webserver:
-    image: my_airflow_custom
+    image: my-airflow-image
     depends_on:
       - postgres
       - airflow
@@ -100,14 +100,14 @@ services:
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
-      - ./scripts:/opt/airflow/scripts
+      - ./src:/opt/airflow/src
       - ./plugins:/opt/airflow/plugins
       - ./credentials/key.json:/opt/airflow/credentials/key.json
       - ./dbt:/opt/airflow/dbt
 
   # 6) Triggerer
   airflow-triggerer:
-    image: my_airflow_custom
+    image: my-airflow-image
     depends_on:
       - postgres
       - airflow
@@ -128,7 +128,7 @@ services:
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
-      - ./scripts:/opt/airflow/scripts
+      - ./src:/opt/airflow/src
       - ./plugins:/opt/airflow/plugins
       - ./credentials/key.json:/opt/airflow/credentials/key.json
       - ./dbt:/opt/airflow/dbt
@@ -136,12 +136,17 @@ services:
 
   # 7) Spark Master
   spark-master:
-    image: bitnami/spark:3.3.0
+    image: my-spark-custom
     container_name: spark-master
+    volumes:
+      - ./src:/opt/airflow/src  
+      - ./credentials/key.json:/opt/airflow/credentials/key.json
     environment:
       - SPARK_MODE=master
       - SPARK_MASTER_PORT_NUMBER=7077
       - SPARK_MASTER_WEBUI_PORT_NUMBER=8081
+      - GOOGLE_APPLICATION_CREDENTIALS=/opt/airflow/credentials/key.json
+      
     command: >
       /opt/bitnami/spark/sbin/start-master.sh --port 7077 --webui-port 8081
     ports:
@@ -150,14 +155,19 @@ services:
 
   # 8) Spark Worker
   spark-worker:
-    image: bitnami/spark:3.3.0
+    image: my-spark-custom
     container_name: spark-worker
+    volumes:
+      - ./src:/opt/airflow/src
+      - ./credentials/key.json:/opt/airflow/credentials/key.json
     depends_on:
       - spark-master
     environment:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark-master:7077
       - SPARK_WORKER_WEBUI_PORT_NUMBER=8082
+      - GOOGLE_APPLICATION_CREDENTIALS=/opt/airflow/credentials/key.json
+      
     command: >
       /opt/bitnami/spark/sbin/start-worker.sh --webui-port 8082 spark://spark-master:7077
     ports:

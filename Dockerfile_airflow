@@ -10,6 +10,22 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
 
+# Download and install Spark
+ENV SPARK_VERSION=3.3.1
+ENV HADOOP_VERSION=3
+ENV SPARK_HOME=/opt/spark
+
+RUN curl -sL "https://archive.apache.org/dist/spark/spark-$SPARK_VERSION/spark-$SPARK_VERSION-bin-hadoop$HADOOP_VERSION.tgz" \
+   -o /tmp/spark.tgz \
+ && mkdir -p /opt \
+ && tar -xzf /tmp/spark.tgz -C /opt \
+ && mv /opt/spark-$SPARK_VERSION-bin-hadoop$HADOOP_VERSION /opt/spark \
+ && rm /tmp/spark.tgz
+
+# Now copy the GCS connector jar into /opt/spark/jars
+RUN curl -L "https://storage.googleapis.com/hadoop-lib/gcs/gcs-connector-hadoop3-latest.jar" \
+    -o /opt/spark/jars/gcs-connector-hadoop3-latest.jar
+
 USER airflow
 
 RUN pip install --user --no-cache-dir -r /tmp/requirements.txt
