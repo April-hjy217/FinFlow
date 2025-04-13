@@ -5,5 +5,5 @@ sources:
     database: "{{ env_var('GCP_PROJECT_ID') }}"
     schema: "{{ env_var('GCP_DATASET_ID') }}"
     tables:
-      - name: transformed_data
-        identifier: transformed_data
+      - name: bigquery_data
+        identifier: bigquery_data

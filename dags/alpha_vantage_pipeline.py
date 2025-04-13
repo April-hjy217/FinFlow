@@ -153,7 +153,7 @@ ingest_fx_task = PythonOperator(
 )
 
 
-# 3) Upload stocks to GCS
+# 3) upload stocks
 def upload_stocks(**kwargs):
     import pandas as pd
     df_json = kwargs['ti'].xcom_pull(task_ids='ingest_stocks', key='stocks_df')
@@ -172,7 +172,7 @@ upload_stocks_task = PythonOperator(
 )
 
 
-#  4) Upload forex to GCS 
+#  4) Upload forex
 def upload_fx(**kwargs):
     import pandas as pd
     df_json = kwargs['ti'].xcom_pull(task_ids='ingest_fx', key='forex_df')
@@ -200,58 +200,36 @@ spark_task = PythonOperator(
 )
 
 
-# 6) dbt run
+   
+# 6) Load to BigQuery
+
+load_transformed_data = GCSToBigQueryOperator(
+    task_id='load_transformed_data',
+    bucket=os.environ["DATA_LAKE_BUCKET"],
+    source_objects=['transformed_data/*.parquet'],
+    destination_project_dataset_table=f"{os.environ['GCP_PROJECT_ID']}.{os.environ['GCP_DATASET_ID']}.bigquery_data",
+    source_format='PARQUET',
+    write_disposition='WRITE_APPEND',
+    dag=dag
+)
+
+
+
+# 7) dbt run
 dbt_task = PythonOperator(
     task_id="dbt_run",
     python_callable=dbt_run,
     dag=dag
 )
 
-
-   
-# 7) Load to BigQuery
-
-load_transformed_data = GCSToBigQueryOperator(
-    task_id='load_transformed_data',
-    bucket=os.environ["DATA_LAKE_BUCKET"],
-    source_objects=['transformed_data/*.parquet'],
-    destination_project_dataset_table=f"{os.environ['GCP_PROJECT_ID']}.{os.environ['GCP_DATASET_ID']}.transformed_data",
-    source_format='PARQUET',
-    write_disposition='WRITE_TRUNCATE',
-    dag=dag
-)
-
-
-# load_stocks = GCSToBigQueryOperator(
-#     task_id='load_stocks',
-#     bucket = os.environ["DATA_LAKE_BUCKET"],
-#     source_objects=['raw/alpha_vantage/USO/*.csv', 'raw/alpha_vantage/AAPL/*.csv', 'raw/alpha_vantage/QQQ/*.csv'],
-#     destination_project_dataset_table=f"{project_id}.{dataset_id}.final_table_stocks",
-#     source_format='CSV',
-#     autodetect=True,
-#     write_disposition='WRITE_TRUNCATE',
-#     dag=dag
-# )
-
-# load_forex = GCSToBigQueryOperator(
-#     task_id='load_forex',
-#     bucket = os.environ["DATA_LAKE_BUCKET"],
-#     source_objects=['raw/alpha_vantage/AUD_CNY/*.csv', 'raw/alpha_vantage/USD_CNY/*.csv'],
-#     destination_project_dataset_table=f"{project_id}.{dataset_id}.final_table_forex",
-#     source_format='CSV',
-#     autodetect=True,
-#     write_disposition='WRITE_APPEND',
-#     dag=dag
-# )
-
-# 5) Analysis / final query
+# 8) Analysis / final query
 analysis_task = PythonOperator(
     task_id='analysis_task',
     python_callable=do_analysis,
     dag=dag
 )
 
-# Define task dependencies in a chain
+# Task Dependencies
 ingest_stocks_task >> upload_stocks_task
 ingest_fx_task >> upload_fx_task
 

@@ -1,13 +1,13 @@
 # FinFlow Data Pipeline
 
-A data engineering project using **Alpha Vantage** APIs, **Airflow**, **Spark**, **dbt**, and **BigQuery** to ingest, transform, and analyze financial data—such as **Forex** (AUD/CNY, USD/CNY) and **stocks** (AAPL, QQQ, USO). This pipeline stores raw data in GCS, processes it via Spark/dbt, and loads deduplicated, final tables into BigQuery for analytics. A **Metabase** dashboard can then visualize insights.
+A streamlined pipeline for Alpha Vantage financial data, orchestrated via Airflow, processed with Spark, stored in BigQuery, modeled with DBT, and visualized in Metabase.
 
 ---
 
 ## Final Dashboard
 
-- **Link**: [Metabase Dashboard](https://glorious-broccoli-x5pv7rg9gp4g3vxq4-3000.app.github.dev/public/dashboard/c0e448a2-17d9-475e-b92b-ab8a1d0c0de5) The link only works when Metabase is actively running docker-compose up
-![Dashboard](./images/Metabase.png)
+- **Link**: [Metabase Dashboard](http://glorious-broccoli-x5pv7rg9gp4g3vxq4-3000.app.github.dev/public/dashboard/c0e448a2-17d9-475e-b92b-ab8a1d0c0de5 ) The link only works when Metabase is actively running docker-compose up
+![Dashboard](./images/finflow.png)
 ---
 
 ## 1. Problem Description
@@ -16,12 +16,15 @@ Recent fluctuations in both **stock** and **foreign exchange** rates (especially
 
 Hence, this project aims to build a **scalable pipeline** that:
 
-1. **Schedules and Orchestrates** the workflow with **Airflow**.
-2. **Extracts** data from **Alpha Vantage**.
-3. **Stores** raw CSVs in **Google Cloud Storage (GCS)**.
-4. **Transforms** them using **Spark** (batch processing) and **dbt** (for final cleaning/deduplication).
-5. **Loads** final tables into **BigQuery**.
-6. **Visualizes** the results in **Metabase** for insights on currency movements (AUD/CNY, USD/CNY) and stock/ETF performance (USO, AAPL, QQQ).
+- **Orchestrates** the entire workflow with **Airflow**.
+    ![Airflow](./images/airflow.png)
+- **Extracts** market data from **Alpha Vantage**.
+- **Lands** raw CSV files in **Google Cloud Storage (GCS)**.
+    ![GCS](./images/gcs.png)
+- **Transforms** those files using **Spark** (batch processing) and **dbt** (final cleaning and deduplication).
+- **Loads** the refined tables into **BigQuery**.
+    ![bigquery](./images/bigquery.png)
+- **Visualizes** currency movements (AUD/CNY, USD/CNY) and stock/ETF performance (USO, AAPL, QQQ) in **Metabase**.
 
 ---
 
@@ -39,12 +42,12 @@ FinFlow
 │   ├── models/
 │   │   ├── dedup_forex.sql
 │   │   ├── dedup_stocks.sql
-│   ├── sources.yml               # dbt sources referencing 'transformed_data' or older final tables
+│   ├── sources.yml              
 │   ├── dbt_project.yml
 │   ├── profiles.yml
 │   └── target/
 ├── images/
-│   └── Metabase.png             # screenshot for README
+│   └── finflow.png             # screenshot for Metabase
 ├── logs/                         # Airflow logs or custom logs
 ├── metabase-data/               # Metabase persistent data
 ├── plugins/
@@ -68,6 +71,61 @@ FinFlow
 └── README.md                     # This file
 
 ```
+## 3. Deployment & Execution
+
+### Prerequisites
+
+- **Docker & Docker Compose**
+- **Google Cloud** project with a BigQuery dataset & GCS bucket
+- **Alpha Vantage API key**
+
+### Steps
+
+1. **Clone the Repo**
+    
+    ```bash
+    git clone https://github.com/.../finflow.git
+    
+    ```
+    
+2. **Create an `.env` file** with real values:
+    
+    ```bash
+    bash
+    CopyEdit
+    ALPHA_VANTAGE_API_KEY=YOUR_REAL_KEY
+    GCP_PROJECT_ID=your-project
+    GCP_DATASET_ID=my_dataset
+    DATA_LAKE_BUCKET=your-gcs-bucket
+    
+    ```
+    
+3. **GCP Credentials**
+    - Place your service account key (e.g. `key.json`) in `credentials/` and configure Docker/Airflow as needed.
+4. **Build & Run**
+    
+    ```bash
+    docker-compose build
+    docker-compose up -d
+    
+    ```
+    
+    This launches Airflow (webserver + scheduler), Spark, Metabase, and Postgres.
+    
+5. **Airflow**
+    - Access [http://localhost:8080](http://localhost:8080/) (default user: `admin`, pass: `admin`).
+    - Turn on the `alpha_vantage_pipeline` DAG.
+    - Trigger a run or wait for its schedule.
+
+---
+
+## 4. Viewing Dashboard (Metabase)
+
+1. **Metabase**
+    - Go to [http://localhost:3000](http://localhost:3000/).
+    - Add a new “BigQuery” data source.
+2. **Explore Final Tables**
+    - Find **`final_table_stocks_clean`** and **`final_table_forex_clean`**.
 
 ---
 
