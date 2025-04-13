@@ -91,8 +91,6 @@ FinFlow
 2. **Create an `.env` file** with real values:
     
     ```bash
-    bash
-    CopyEdit
     ALPHA_VANTAGE_API_KEY=YOUR_REAL_KEY
     GCP_PROJECT_ID=your-project
     GCP_DATASET_ID=my_dataset
