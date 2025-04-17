@@ -114,14 +114,15 @@ FinFlow
     - Access [http://localhost:8080](http://localhost:8080/) (default user: `admin`, pass: `admin`).
     - Turn on the `alpha_vantage_pipeline` DAG.
     - Trigger a run or wait for its schedule.
+    ⚠️ Note: The first login might fail. If so, click to go back and try again—it should work.
 
 ---
 
 ## 4. Viewing Dashboard (Metabase)
 
 1. **Metabase**
-    - Go to [http://localhost:3000](http://localhost:3000/).
-    - Add a new “BigQuery” data source.
+    - Go to [http://localhost:3000](http://localhost:3000/)(default user: `20250107@gmail.com`, pass: `200758573`).
+
 2. **Explore Final Tables**
     - Find **`final_table_stocks_clean`** and **`final_table_forex_clean`**.
 

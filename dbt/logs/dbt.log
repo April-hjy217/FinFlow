@@ -5022,3 +5022,1758 @@ FROM final
 [0m12:02:05.119169 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
 [0m12:02:05.119813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x752e77dc6f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x752e8c418e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x752e77e05e50>]}
 [0m12:02:05.120340 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-15 01:50:38.398277 | cf1ec247-dc53-4481-8afd-ab9cb5c9a017 ==============================
+[0m01:50:38.398338 [info ] [MainThread]: Running with dbt=1.3.0
+[0m01:50:38.402882 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m01:50:38.403196 [debug] [MainThread]: Tracking: tracking
+[0m01:50:38.426457 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7880577e7890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7880577d79d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7880577d7e90>]}
+[0m01:50:38.632228 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m01:50:38.633683 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m01:50:38.654606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cf1ec247-dc53-4481-8afd-ab9cb5c9a017', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78805775d8d0>]}
+[0m01:50:38.679021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cf1ec247-dc53-4481-8afd-ab9cb5c9a017', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788057720b50>]}
+[0m01:50:38.679661 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m01:50:38.680367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cf1ec247-dc53-4481-8afd-ab9cb5c9a017', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788057720bd0>]}
+[0m01:50:38.682331 [info ] [MainThread]: 
+[0m01:50:38.683571 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m01:50:38.685248 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108"
+[0m01:50:38.685799 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:50:39.600197 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108_my_dataset"
+[0m01:50:39.600641 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m01:50:40.334406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cf1ec247-dc53-4481-8afd-ab9cb5c9a017', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788061695cd0>]}
+[0m01:50:40.335289 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m01:50:40.336167 [info ] [MainThread]: 
+[0m01:50:40.343846 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_forex
+[0m01:50:40.344197 [info ] [Thread-1  ]: 1 of 2 START sql table model my_dataset.final_table_forex_clean ................ [RUN]
+[0m01:50:40.344935 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_forex"
+[0m01:50:40.345141 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_forex
+[0m01:50:40.345395 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_forex
+[0m01:50:40.349734 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_forex"
+[0m01:50:40.350340 [debug] [Thread-1  ]: finished collecting timing info
+[0m01:50:40.350673 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_forex
+[0m01:50:40.389729 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:50:41.113109 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_forex_clean` because it is not replaceable
+[0m01:50:41.487519 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_forex"
+[0m01:50:41.488135 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_forex: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_forex"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_forex_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d-%H-%M', timestamp) AS ts_parsed,
+
+    SAFE_CAST(low AS FLOAT64)   AS exchange_rate,
+    SAFE_CAST(high AS FLOAT64)  AS high_price,
+    SAFE_CAST(open AS FLOAT64)  AS open_price,
+    SAFE_CAST(close AS FLOAT64) AS close_price,
+
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'forex'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed         AS local_timestamp,
+  date_parsed,      
+  exchange_rate,
+  high_price,
+  open_price,
+  close_price
+FROM final
+    );
+  
+[0m01:50:44.862768 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:9b1d610e-bb07-4200-b7e7-44a6faf98965:us-central1&page=queryresults
+[0m01:50:44.892650 [debug] [Thread-1  ]: finished collecting timing info
+[0m01:50:44.893337 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cf1ec247-dc53-4481-8afd-ab9cb5c9a017', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788057499d50>]}
+[0m01:50:44.893745 [info ] [Thread-1  ]: 1 of 2 OK created sql table model my_dataset.final_table_forex_clean ........... [[32mCREATE TABLE (12.0 rows, 1.3 MB processed)[0m in 4.55s]
+[0m01:50:44.894339 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_forex
+[0m01:50:44.894599 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_stocks
+[0m01:50:44.894990 [info ] [Thread-1  ]: 2 of 2 START sql table model my_dataset.final_table_stocks_clean ............... [RUN]
+[0m01:50:44.895685 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_stocks"
+[0m01:50:44.895889 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_stocks
+[0m01:50:44.896112 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_stocks
+[0m01:50:44.899936 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_stocks"
+[0m01:50:44.900383 [debug] [Thread-1  ]: finished collecting timing info
+[0m01:50:44.900661 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_stocks
+[0m01:50:44.902835 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:50:45.681148 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_stocks_clean` because it is not replaceable
+[0m01:50:45.959185 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_stocks"
+[0m01:50:45.959795 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_stocks: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_stocks"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_stocks_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', timestamp) AS ts_parsed,
+    SAFE_CAST(open   AS FLOAT64) AS open_price,
+    SAFE_CAST(high   AS FLOAT64) AS high_price,
+    SAFE_CAST(low    AS FLOAT64) AS low_price,
+    SAFE_CAST(close  AS FLOAT64) AS close_price,
+    SAFE_CAST(volume AS INT64)   AS volume,
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'equity'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    open_price,
+    high_price,
+    low_price,
+    close_price,
+    volume,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,  -- For partitioning
+    open_price  AS open,
+    high_price  AS high,
+    low_price   AS low,
+    close_price AS close,
+    volume
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed           AS timestamp,
+  date_parsed,        
+  open,
+  high,
+  low,
+  close,
+  volume
+FROM final
+    );
+  
+[0m01:50:48.912330 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:7c4bf777-e549-495d-8e0c-5a236279f683:us-central1&page=queryresults
+[0m01:50:48.914416 [debug] [Thread-1  ]: finished collecting timing info
+[0m01:50:48.915060 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cf1ec247-dc53-4481-8afd-ab9cb5c9a017', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78805769d7d0>]}
+[0m01:50:48.915468 [info ] [Thread-1  ]: 2 of 2 OK created sql table model my_dataset.final_table_stocks_clean .......... [[32mCREATE TABLE (494.0 rows, 1.5 MB processed)[0m in 4.02s]
+[0m01:50:48.916010 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_stocks
+[0m01:50:48.985719 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m01:50:48.986341 [info ] [MainThread]: 
+[0m01:50:48.986733 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 10.30 seconds (10.30s).
+[0m01:50:48.987125 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:50:48.987324 [debug] [MainThread]: Connection 'model.my_dbt_project.dedup_stocks' was properly closed.
+[0m01:50:48.994186 [info ] [MainThread]: 
+[0m01:50:48.994628 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m01:50:48.995051 [info ] [MainThread]: 
+[0m01:50:48.995438 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m01:50:48.995890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788057720290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7880577ea0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7880577d47d0>]}
+[0m01:50:48.996176 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-15 12:15:28.572974 | d465f845-29ed-4bff-a5e6-aaa4980775f6 ==============================
+[0m12:15:28.573015 [info ] [MainThread]: Running with dbt=1.3.0
+[0m12:15:28.579552 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m12:15:28.579917 [debug] [MainThread]: Tracking: tracking
+[0m12:15:28.598539 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e5f2bc2290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e5f2bc25d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e5f2c6a650>]}
+[0m12:15:28.702393 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:15:28.702825 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:15:28.713733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd465f845-29ed-4bff-a5e6-aaa4980775f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e5f2accc10>]}
+[0m12:15:28.740540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd465f845-29ed-4bff-a5e6-aaa4980775f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e5f2bc9750>]}
+[0m12:15:28.741950 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m12:15:28.742557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd465f845-29ed-4bff-a5e6-aaa4980775f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e5f2bc9f50>]}
+[0m12:15:28.745298 [info ] [MainThread]: 
+[0m12:15:28.748730 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m12:15:28.750411 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108"
+[0m12:15:28.750878 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:15:29.548059 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108_my_dataset"
+[0m12:15:29.548408 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:15:30.272907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd465f845-29ed-4bff-a5e6-aaa4980775f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e5f2c17d10>]}
+[0m12:15:30.273657 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:15:30.274100 [info ] [MainThread]: 
+[0m12:15:30.279759 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_forex
+[0m12:15:30.280132 [info ] [Thread-1  ]: 1 of 2 START sql table model my_dataset.final_table_forex_clean ................ [RUN]
+[0m12:15:30.280861 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_forex"
+[0m12:15:30.281075 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_forex
+[0m12:15:30.281346 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_forex
+[0m12:15:30.285415 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_forex"
+[0m12:15:30.286533 [debug] [Thread-1  ]: finished collecting timing info
+[0m12:15:30.286999 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_forex
+[0m12:15:30.312008 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:15:31.022865 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_forex_clean` because it is not replaceable
+[0m12:15:31.412715 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_forex"
+[0m12:15:31.413275 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_forex: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_forex"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_forex_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d-%H-%M', timestamp) AS ts_parsed,
+
+    SAFE_CAST(low AS FLOAT64)   AS exchange_rate,
+    SAFE_CAST(high AS FLOAT64)  AS high_price,
+    SAFE_CAST(open AS FLOAT64)  AS open_price,
+    SAFE_CAST(close AS FLOAT64) AS close_price,
+
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'forex'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed         AS local_timestamp,
+  date_parsed,      
+  exchange_rate,
+  high_price,
+  open_price,
+  close_price
+FROM final
+    );
+  
+[0m12:15:34.871002 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:d37ea586-d7a9-464e-b38b-f4774ce4e22f:us-central1&page=queryresults
+[0m12:15:34.889330 [debug] [Thread-1  ]: finished collecting timing info
+[0m12:15:34.889976 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd465f845-29ed-4bff-a5e6-aaa4980775f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e5f2ce2350>]}
+[0m12:15:34.890379 [info ] [Thread-1  ]: 1 of 2 OK created sql table model my_dataset.final_table_forex_clean ........... [[32mCREATE TABLE (12.0 rows, 1.5 MB processed)[0m in 4.61s]
+[0m12:15:34.890945 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_forex
+[0m12:15:34.891224 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_stocks
+[0m12:15:34.891595 [info ] [Thread-1  ]: 2 of 2 START sql table model my_dataset.final_table_stocks_clean ............... [RUN]
+[0m12:15:34.892284 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_stocks"
+[0m12:15:34.892491 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_stocks
+[0m12:15:34.892714 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_stocks
+[0m12:15:34.896440 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_stocks"
+[0m12:15:34.896950 [debug] [Thread-1  ]: finished collecting timing info
+[0m12:15:34.897241 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_stocks
+[0m12:15:34.899341 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:15:35.582134 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_stocks_clean` because it is not replaceable
+[0m12:15:35.918648 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_stocks"
+[0m12:15:35.919293 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_stocks: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_stocks"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_stocks_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', timestamp) AS ts_parsed,
+    SAFE_CAST(open   AS FLOAT64) AS open_price,
+    SAFE_CAST(high   AS FLOAT64) AS high_price,
+    SAFE_CAST(low    AS FLOAT64) AS low_price,
+    SAFE_CAST(close  AS FLOAT64) AS close_price,
+    SAFE_CAST(volume AS INT64)   AS volume,
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'equity'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    open_price,
+    high_price,
+    low_price,
+    close_price,
+    volume,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,  -- For partitioning
+    open_price  AS open,
+    high_price  AS high,
+    low_price   AS low,
+    close_price AS close,
+    volume
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed           AS timestamp,
+  date_parsed,        
+  open,
+  high,
+  low,
+  close,
+  volume
+FROM final
+    );
+  
+[0m12:15:39.053864 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:7cd203de-7dc2-455e-bd71-1db8b954630c:us-central1&page=queryresults
+[0m12:15:39.056170 [debug] [Thread-1  ]: finished collecting timing info
+[0m12:15:39.056861 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd465f845-29ed-4bff-a5e6-aaa4980775f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e5f29160d0>]}
+[0m12:15:39.057253 [info ] [Thread-1  ]: 2 of 2 OK created sql table model my_dataset.final_table_stocks_clean .......... [[32mCREATE TABLE (494.0 rows, 1.6 MB processed)[0m in 4.16s]
+[0m12:15:39.057790 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_stocks
+[0m12:15:39.108974 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m12:15:39.109507 [info ] [MainThread]: 
+[0m12:15:39.109903 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 10.36 seconds (10.36s).
+[0m12:15:39.110279 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:15:39.110457 [debug] [MainThread]: Connection 'model.my_dbt_project.dedup_stocks' was properly closed.
+[0m12:15:39.116895 [info ] [MainThread]: 
+[0m12:15:39.117303 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:15:39.117706 [info ] [MainThread]: 
+[0m12:15:39.118101 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m12:15:39.118523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e5f8f1f710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e60862ef50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e5f2b87a50>]}
+[0m12:15:39.118820 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-16 02:53:24.933109 | 4fba435f-6c89-4899-9e28-873bab9ee062 ==============================
+[0m02:53:24.933162 [info ] [MainThread]: Running with dbt=1.3.0
+[0m02:53:24.939872 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m02:53:24.940227 [debug] [MainThread]: Tracking: tracking
+[0m02:53:24.952752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ac288f2310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ac288f2610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ac288f2490>]}
+[0m02:53:25.062350 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m02:53:25.062876 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m02:53:25.073694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4fba435f-6c89-4899-9e28-873bab9ee062', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ac28758390>]}
+[0m02:53:25.086789 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4fba435f-6c89-4899-9e28-873bab9ee062', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ac288db0d0>]}
+[0m02:53:25.087325 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m02:53:25.088089 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4fba435f-6c89-4899-9e28-873bab9ee062', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ac288db850>]}
+[0m02:53:25.090338 [info ] [MainThread]: 
+[0m02:53:25.091581 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m02:53:25.093211 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108"
+[0m02:53:25.093845 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:53:26.036830 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108_my_dataset"
+[0m02:53:26.037217 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m02:53:26.715251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4fba435f-6c89-4899-9e28-873bab9ee062', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ac287d8310>]}
+[0m02:53:26.716083 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m02:53:26.716542 [info ] [MainThread]: 
+[0m02:53:26.722108 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_forex
+[0m02:53:26.722468 [info ] [Thread-1  ]: 1 of 2 START sql table model my_dataset.final_table_forex_clean ................ [RUN]
+[0m02:53:26.723123 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_forex"
+[0m02:53:26.723401 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_forex
+[0m02:53:26.723661 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_forex
+[0m02:53:26.727848 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_forex"
+[0m02:53:26.728343 [debug] [Thread-1  ]: finished collecting timing info
+[0m02:53:26.728606 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_forex
+[0m02:53:26.752850 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m02:53:27.650561 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_forex_clean` because it is not replaceable
+[0m02:53:28.048703 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_forex"
+[0m02:53:28.051233 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_forex: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_forex"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_forex_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d-%H-%M', timestamp) AS ts_parsed,
+
+    SAFE_CAST(low AS FLOAT64)   AS exchange_rate,
+    SAFE_CAST(high AS FLOAT64)  AS high_price,
+    SAFE_CAST(open AS FLOAT64)  AS open_price,
+    SAFE_CAST(close AS FLOAT64) AS close_price,
+
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'forex'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed         AS local_timestamp,
+  date_parsed,      
+  exchange_rate,
+  high_price,
+  open_price,
+  close_price
+FROM final
+    );
+  
+[0m02:53:30.955421 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:66c92fcd-c41d-4575-a6b3-0c2cf4ddc5ff:us-central1&page=queryresults
+[0m02:53:30.973797 [debug] [Thread-1  ]: finished collecting timing info
+[0m02:53:30.974521 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4fba435f-6c89-4899-9e28-873bab9ee062', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ac3864bf10>]}
+[0m02:53:30.974921 [info ] [Thread-1  ]: 1 of 2 OK created sql table model my_dataset.final_table_forex_clean ........... [[32mCREATE TABLE (12.0 rows, 1.6 MB processed)[0m in 4.25s]
+[0m02:53:30.975474 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_forex
+[0m02:53:30.975762 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_stocks
+[0m02:53:30.976135 [info ] [Thread-1  ]: 2 of 2 START sql table model my_dataset.final_table_stocks_clean ............... [RUN]
+[0m02:53:30.976829 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_stocks"
+[0m02:53:30.977039 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_stocks
+[0m02:53:30.977285 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_stocks
+[0m02:53:30.980980 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_stocks"
+[0m02:53:30.981442 [debug] [Thread-1  ]: finished collecting timing info
+[0m02:53:30.981713 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_stocks
+[0m02:53:30.983813 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m02:53:31.794554 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_stocks_clean` because it is not replaceable
+[0m02:53:32.161009 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_stocks"
+[0m02:53:32.161612 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_stocks: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_stocks"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_stocks_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', timestamp) AS ts_parsed,
+    SAFE_CAST(open   AS FLOAT64) AS open_price,
+    SAFE_CAST(high   AS FLOAT64) AS high_price,
+    SAFE_CAST(low    AS FLOAT64) AS low_price,
+    SAFE_CAST(close  AS FLOAT64) AS close_price,
+    SAFE_CAST(volume AS INT64)   AS volume,
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'equity'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    open_price,
+    high_price,
+    low_price,
+    close_price,
+    volume,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,  -- For partitioning
+    open_price  AS open,
+    high_price  AS high,
+    low_price   AS low,
+    close_price AS close,
+    volume
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed           AS timestamp,
+  date_parsed,        
+  open,
+  high,
+  low,
+  close,
+  volume
+FROM final
+    );
+  
+[0m02:53:34.948512 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:88bf4d9e-0095-4a27-8aba-60849088919f:us-central1&page=queryresults
+[0m02:53:34.950548 [debug] [Thread-1  ]: finished collecting timing info
+[0m02:53:34.951202 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4fba435f-6c89-4899-9e28-873bab9ee062', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ac285a4f90>]}
+[0m02:53:34.951587 [info ] [Thread-1  ]: 2 of 2 OK created sql table model my_dataset.final_table_stocks_clean .......... [[32mCREATE TABLE (494.0 rows, 1.8 MB processed)[0m in 3.97s]
+[0m02:53:34.952114 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_stocks
+[0m02:53:35.045575 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m02:53:35.046264 [info ] [MainThread]: 
+[0m02:53:35.046655 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 9.96 seconds (9.96s).
+[0m02:53:35.047036 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:53:35.047267 [debug] [MainThread]: Connection 'model.my_dbt_project.dedup_stocks' was properly closed.
+[0m02:53:35.053682 [info ] [MainThread]: 
+[0m02:53:35.054090 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:53:35.054532 [info ] [MainThread]: 
+[0m02:53:35.054891 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m02:53:35.055346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ac2858db10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ac287efd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ac28761710>]}
+[0m02:53:35.055636 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-17 06:48:19.333975 | fa2ee4d1-15e6-4dfe-a973-4a228f4c22af ==============================
+[0m06:48:19.334023 [info ] [MainThread]: Running with dbt=1.3.0
+[0m06:48:19.359610 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m06:48:19.359928 [debug] [MainThread]: Tracking: tracking
+[0m06:48:19.378580 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ca91abd3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ca91abd5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ca91bf86d0>]}
+[0m06:48:19.525109 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:48:19.525574 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:48:19.536647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fa2ee4d1-15e6-4dfe-a973-4a228f4c22af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ca919dc1d0>]}
+[0m06:48:19.548419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fa2ee4d1-15e6-4dfe-a973-4a228f4c22af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ca91ad00d0>]}
+[0m06:48:19.549014 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m06:48:19.549820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fa2ee4d1-15e6-4dfe-a973-4a228f4c22af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ca91ad04d0>]}
+[0m06:48:19.551847 [info ] [MainThread]: 
+[0m06:48:19.553052 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m06:48:19.554727 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108"
+[0m06:48:19.555286 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:48:20.436677 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108_my_dataset"
+[0m06:48:20.437103 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m06:48:21.209616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fa2ee4d1-15e6-4dfe-a973-4a228f4c22af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ca91b0f4d0>]}
+[0m06:48:21.210446 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m06:48:21.210869 [info ] [MainThread]: 
+[0m06:48:21.216679 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_forex
+[0m06:48:21.217016 [info ] [Thread-1  ]: 1 of 2 START sql table model my_dataset.final_table_forex_clean ................ [RUN]
+[0m06:48:21.217739 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_forex"
+[0m06:48:21.217948 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_forex
+[0m06:48:21.218212 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_forex
+[0m06:48:21.222312 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_forex"
+[0m06:48:21.222750 [debug] [Thread-1  ]: finished collecting timing info
+[0m06:48:21.223022 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_forex
+[0m06:48:21.245786 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:48:22.031523 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_forex_clean` because it is not replaceable
+[0m06:48:22.464044 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_forex"
+[0m06:48:22.464626 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_forex: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_forex"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_forex_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d-%H-%M', timestamp) AS ts_parsed,
+
+    SAFE_CAST(low AS FLOAT64)   AS exchange_rate,
+    SAFE_CAST(high AS FLOAT64)  AS high_price,
+    SAFE_CAST(open AS FLOAT64)  AS open_price,
+    SAFE_CAST(close AS FLOAT64) AS close_price,
+
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'forex'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed         AS local_timestamp,
+  date_parsed,      
+  exchange_rate,
+  high_price,
+  open_price,
+  close_price
+FROM final
+    );
+  
+[0m06:48:26.372795 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:859bbd0c-681f-4d73-ad0c-b061713ff82f:us-central1&page=queryresults
+[0m06:48:26.390989 [debug] [Thread-1  ]: finished collecting timing info
+[0m06:48:26.391689 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fa2ee4d1-15e6-4dfe-a973-4a228f4c22af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ca91a72c90>]}
+[0m06:48:26.392101 [info ] [Thread-1  ]: 1 of 2 OK created sql table model my_dataset.final_table_forex_clean ........... [[32mCREATE TABLE (12.0 rows, 1.7 MB processed)[0m in 5.17s]
+[0m06:48:26.392633 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_forex
+[0m06:48:26.392942 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_stocks
+[0m06:48:26.393354 [info ] [Thread-1  ]: 2 of 2 START sql table model my_dataset.final_table_stocks_clean ............... [RUN]
+[0m06:48:26.394017 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_stocks"
+[0m06:48:26.394250 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_stocks
+[0m06:48:26.394466 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_stocks
+[0m06:48:26.398113 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_stocks"
+[0m06:48:26.398564 [debug] [Thread-1  ]: finished collecting timing info
+[0m06:48:26.398848 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_stocks
+[0m06:48:26.401144 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:48:27.101860 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_stocks_clean` because it is not replaceable
+[0m06:48:27.440679 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_stocks"
+[0m06:48:27.441264 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_stocks: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_stocks"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_stocks_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', timestamp) AS ts_parsed,
+    SAFE_CAST(open   AS FLOAT64) AS open_price,
+    SAFE_CAST(high   AS FLOAT64) AS high_price,
+    SAFE_CAST(low    AS FLOAT64) AS low_price,
+    SAFE_CAST(close  AS FLOAT64) AS close_price,
+    SAFE_CAST(volume AS INT64)   AS volume,
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'equity'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    open_price,
+    high_price,
+    low_price,
+    close_price,
+    volume,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,  -- For partitioning
+    open_price  AS open,
+    high_price  AS high,
+    low_price   AS low,
+    close_price AS close,
+    volume
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed           AS timestamp,
+  date_parsed,        
+  open,
+  high,
+  low,
+  close,
+  volume
+FROM final
+    );
+  
+[0m06:48:30.872513 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:cf3c1c38-148b-45ea-9890-d19e55fd525b:us-central1&page=queryresults
+[0m06:48:30.875821 [debug] [Thread-1  ]: finished collecting timing info
+[0m06:48:30.878004 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fa2ee4d1-15e6-4dfe-a973-4a228f4c22af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ca91828f50>]}
+[0m06:48:30.879382 [info ] [Thread-1  ]: 2 of 2 OK created sql table model my_dataset.final_table_stocks_clean .......... [[32mCREATE TABLE (494.0 rows, 1.9 MB processed)[0m in 4.48s]
+[0m06:48:30.880809 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_stocks
+[0m06:48:30.949990 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m06:48:30.950982 [info ] [MainThread]: 
+[0m06:48:30.951578 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 11.40 seconds (11.40s).
+[0m06:48:30.952125 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:48:30.952418 [debug] [MainThread]: Connection 'model.my_dbt_project.dedup_stocks' was properly closed.
+[0m06:48:30.961860 [info ] [MainThread]: 
+[0m06:48:30.962308 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m06:48:30.962747 [info ] [MainThread]: 
+[0m06:48:30.963146 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m06:48:30.963610 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ca91b0cb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ca9181c190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ca919e59d0>]}
+[0m06:48:30.963904 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-17 07:02:43.679467 | fabf1fd7-3d38-441b-a6e1-af8354343609 ==============================
+[0m07:02:43.679511 [info ] [MainThread]: Running with dbt=1.3.0
+[0m07:02:43.706815 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m07:02:43.707189 [debug] [MainThread]: Tracking: tracking
+[0m07:02:43.723295 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7920631568d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792063199d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792063156650>]}
+[0m07:02:43.882383 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m07:02:43.882797 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m07:02:43.896985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fabf1fd7-3d38-441b-a6e1-af8354343609', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792062fc7350>]}
+[0m07:02:43.958202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fabf1fd7-3d38-441b-a6e1-af8354343609', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7920630d3e50>]}
+[0m07:02:43.958680 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m07:02:43.959144 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fabf1fd7-3d38-441b-a6e1-af8354343609', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7920630d3310>]}
+[0m07:02:43.960528 [info ] [MainThread]: 
+[0m07:02:43.961337 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m07:02:43.962490 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108"
+[0m07:02:43.962827 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:02:44.757588 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108_my_dataset"
+[0m07:02:44.757923 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m07:02:45.615425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fabf1fd7-3d38-441b-a6e1-af8354343609', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79206309d790>]}
+[0m07:02:45.616296 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:02:45.616701 [info ] [MainThread]: 
+[0m07:02:45.622220 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_forex
+[0m07:02:45.622539 [info ] [Thread-1  ]: 1 of 2 START sql table model my_dataset.final_table_forex_clean ................ [RUN]
+[0m07:02:45.623237 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_forex"
+[0m07:02:45.623444 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_forex
+[0m07:02:45.623677 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_forex
+[0m07:02:45.627935 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_forex"
+[0m07:02:45.628949 [debug] [Thread-1  ]: finished collecting timing info
+[0m07:02:45.629309 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_forex
+[0m07:02:45.649957 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m07:02:46.324509 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_forex_clean` because it is not replaceable
+[0m07:02:46.671769 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_forex"
+[0m07:02:46.672614 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_forex: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_forex"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_forex_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d-%H-%M', timestamp) AS ts_parsed,
+
+    SAFE_CAST(low AS FLOAT64)   AS exchange_rate,
+    SAFE_CAST(high AS FLOAT64)  AS high_price,
+    SAFE_CAST(open AS FLOAT64)  AS open_price,
+    SAFE_CAST(close AS FLOAT64) AS close_price,
+
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'forex'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed         AS local_timestamp,
+  date_parsed,      
+  exchange_rate,
+  high_price,
+  open_price,
+  close_price
+FROM final
+    );
+  
+[0m07:02:49.899800 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:fdab154e-e614-4eed-bb70-83f6d7ac8caa:us-central1&page=queryresults
+[0m07:02:49.918960 [debug] [Thread-1  ]: finished collecting timing info
+[0m07:02:49.919623 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fabf1fd7-3d38-441b-a6e1-af8354343609', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79206346fad0>]}
+[0m07:02:49.920025 [info ] [Thread-1  ]: 1 of 2 OK created sql table model my_dataset.final_table_forex_clean ........... [[32mCREATE TABLE (12.0 rows, 1.9 MB processed)[0m in 4.30s]
+[0m07:02:49.920588 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_forex
+[0m07:02:49.920842 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_stocks
+[0m07:02:49.921227 [info ] [Thread-1  ]: 2 of 2 START sql table model my_dataset.final_table_stocks_clean ............... [RUN]
+[0m07:02:49.921886 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_stocks"
+[0m07:02:49.922098 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_stocks
+[0m07:02:49.922328 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_stocks
+[0m07:02:49.926149 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_stocks"
+[0m07:02:49.926589 [debug] [Thread-1  ]: finished collecting timing info
+[0m07:02:49.926868 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_stocks
+[0m07:02:49.929103 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m07:02:50.579409 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_stocks_clean` because it is not replaceable
+[0m07:02:50.921652 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_stocks"
+[0m07:02:50.922279 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_stocks: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_stocks"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_stocks_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', timestamp) AS ts_parsed,
+    SAFE_CAST(open   AS FLOAT64) AS open_price,
+    SAFE_CAST(high   AS FLOAT64) AS high_price,
+    SAFE_CAST(low    AS FLOAT64) AS low_price,
+    SAFE_CAST(close  AS FLOAT64) AS close_price,
+    SAFE_CAST(volume AS INT64)   AS volume,
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'equity'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    open_price,
+    high_price,
+    low_price,
+    close_price,
+    volume,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,  -- For partitioning
+    open_price  AS open,
+    high_price  AS high,
+    low_price   AS low,
+    close_price AS close,
+    volume
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed           AS timestamp,
+  date_parsed,        
+  open,
+  high,
+  low,
+  close,
+  volume
+FROM final
+    );
+  
+[0m07:02:53.986482 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:25c9b9e9-04eb-4ce5-b75e-b3432047bd40:us-central1&page=queryresults
+[0m07:02:53.988450 [debug] [Thread-1  ]: finished collecting timing info
+[0m07:02:53.989047 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fabf1fd7-3d38-441b-a6e1-af8354343609', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79206252cb50>]}
+[0m07:02:53.989450 [info ] [Thread-1  ]: 2 of 2 OK created sql table model my_dataset.final_table_stocks_clean .......... [[32mCREATE TABLE (494.0 rows, 2.1 MB processed)[0m in 4.07s]
+[0m07:02:53.989974 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_stocks
+[0m07:02:54.037523 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m07:02:54.038145 [info ] [MainThread]: 
+[0m07:02:54.038530 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 10.08 seconds (10.08s).
+[0m07:02:54.038908 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:02:54.039110 [debug] [MainThread]: Connection 'model.my_dbt_project.dedup_stocks' was properly closed.
+[0m07:02:54.045543 [info ] [MainThread]: 
+[0m07:02:54.045972 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m07:02:54.046425 [info ] [MainThread]: 
+[0m07:02:54.046791 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m07:02:54.047252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79206306c350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79206346ff50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x792063223150>]}
+[0m07:02:54.047541 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-17 08:01:59.272737 | a0b69754-ac58-4fc5-aaa7-e48951bf352f ==============================
+[0m08:01:59.272785 [info ] [MainThread]: Running with dbt=1.3.0
+[0m08:01:59.345741 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m08:01:59.347773 [debug] [MainThread]: Tracking: tracking
+[0m08:01:59.376424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7a9f3cb7d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7a9f479f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7a9f3cb650>]}
+[0m08:01:59.496256 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m08:01:59.496773 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m08:01:59.508709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a0b69754-ac58-4fc5-aaa7-e48951bf352f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7a9f23c310>]}
+[0m08:01:59.526714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a0b69754-ac58-4fc5-aaa7-e48951bf352f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7a9f348f10>]}
+[0m08:01:59.532133 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m08:01:59.541160 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a0b69754-ac58-4fc5-aaa7-e48951bf352f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7a9f3482d0>]}
+[0m08:01:59.548793 [info ] [MainThread]: 
+[0m08:01:59.552797 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m08:01:59.556138 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108"
+[0m08:01:59.559236 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:02:00.447672 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108_my_dataset"
+[0m08:02:00.448047 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:02:01.127483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a0b69754-ac58-4fc5-aaa7-e48951bf352f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7a9f2d3150>]}
+[0m08:02:01.128314 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m08:02:01.128754 [info ] [MainThread]: 
+[0m08:02:01.134593 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_forex
+[0m08:02:01.134934 [info ] [Thread-1  ]: 1 of 2 START sql table model my_dataset.final_table_forex_clean ................ [RUN]
+[0m08:02:01.135666 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_forex"
+[0m08:02:01.135869 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_forex
+[0m08:02:01.136135 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_forex
+[0m08:02:01.140238 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_forex"
+[0m08:02:01.141761 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:02:01.142139 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_forex
+[0m08:02:01.162485 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m08:02:01.854221 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_forex_clean` because it is not replaceable
+[0m08:02:02.193503 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_forex"
+[0m08:02:02.194112 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_forex: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_forex"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_forex_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d-%H-%M', timestamp) AS ts_parsed,
+
+    SAFE_CAST(low AS FLOAT64)   AS exchange_rate,
+    SAFE_CAST(high AS FLOAT64)  AS high_price,
+    SAFE_CAST(open AS FLOAT64)  AS open_price,
+    SAFE_CAST(close AS FLOAT64) AS close_price,
+
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'forex'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed         AS local_timestamp,
+  date_parsed,      
+  exchange_rate,
+  high_price,
+  open_price,
+  close_price
+FROM final
+    );
+  
+[0m08:02:05.245413 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:e315a003-c340-4f62-be71-113abf0d1972:us-central1&page=queryresults
+[0m08:02:05.279298 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:02:05.280584 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a0b69754-ac58-4fc5-aaa7-e48951bf352f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7a9f0e6990>]}
+[0m08:02:05.281249 [info ] [Thread-1  ]: 1 of 2 OK created sql table model my_dataset.final_table_forex_clean ........... [[32mCREATE TABLE (12.0 rows, 2.0 MB processed)[0m in 4.15s]
+[0m08:02:05.282098 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_forex
+[0m08:02:05.282594 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_stocks
+[0m08:02:05.283229 [info ] [Thread-1  ]: 2 of 2 START sql table model my_dataset.final_table_stocks_clean ............... [RUN]
+[0m08:02:05.284377 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_stocks"
+[0m08:02:05.284754 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_stocks
+[0m08:02:05.285138 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_stocks
+[0m08:02:05.291581 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_stocks"
+[0m08:02:05.292428 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:02:05.292855 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_stocks
+[0m08:02:05.296589 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m08:02:05.948419 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_stocks_clean` because it is not replaceable
+[0m08:02:06.234801 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_stocks"
+[0m08:02:06.235730 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_stocks: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_stocks"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_stocks_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', timestamp) AS ts_parsed,
+    SAFE_CAST(open   AS FLOAT64) AS open_price,
+    SAFE_CAST(high   AS FLOAT64) AS high_price,
+    SAFE_CAST(low    AS FLOAT64) AS low_price,
+    SAFE_CAST(close  AS FLOAT64) AS close_price,
+    SAFE_CAST(volume AS INT64)   AS volume,
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'equity'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    open_price,
+    high_price,
+    low_price,
+    close_price,
+    volume,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,  -- For partitioning
+    open_price  AS open,
+    high_price  AS high,
+    low_price   AS low,
+    close_price AS close,
+    volume
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed           AS timestamp,
+  date_parsed,        
+  open,
+  high,
+  low,
+  close,
+  volume
+FROM final
+    );
+  
+[0m08:02:09.003118 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:e32ae8f2-1a52-4111-9000-28e04da2468b:us-central1&page=queryresults
+[0m08:02:09.005195 [debug] [Thread-1  ]: finished collecting timing info
+[0m08:02:09.005847 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a0b69754-ac58-4fc5-aaa7-e48951bf352f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7a9f08ddd0>]}
+[0m08:02:09.006264 [info ] [Thread-1  ]: 2 of 2 OK created sql table model my_dataset.final_table_stocks_clean .......... [[32mCREATE TABLE (494.0 rows, 2.2 MB processed)[0m in 3.72s]
+[0m08:02:09.006811 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_stocks
+[0m08:02:09.035406 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m08:02:09.035998 [info ] [MainThread]: 
+[0m08:02:09.036420 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 9.48 seconds (9.48s).
+[0m08:02:09.036797 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:02:09.036974 [debug] [MainThread]: Connection 'model.my_dbt_project.dedup_stocks' was properly closed.
+[0m08:02:09.043611 [info ] [MainThread]: 
+[0m08:02:09.044035 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:02:09.044486 [info ] [MainThread]: 
+[0m08:02:09.044860 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m08:02:09.045339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7a9f336650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7a9f2477d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c7a9f247990>]}
+[0m08:02:09.045634 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-17 12:02:00.053415 | b9b71b7c-e930-49b4-a749-03bd45fdb1de ==============================
+[0m12:02:00.053465 [info ] [MainThread]: Running with dbt=1.3.0
+[0m12:02:00.087588 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m12:02:00.088641 [debug] [MainThread]: Tracking: tracking
+[0m12:02:00.105316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b48a9f868d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b48ab6a9410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b48a9f86a90>]}
+[0m12:02:00.223828 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:02:00.224496 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:02:00.237685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b9b71b7c-e930-49b4-a749-03bd45fdb1de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b48aa716850>]}
+[0m12:02:00.271794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b9b71b7c-e930-49b4-a749-03bd45fdb1de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b48a9f04790>]}
+[0m12:02:00.274014 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m12:02:00.274717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b9b71b7c-e930-49b4-a749-03bd45fdb1de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b48a9f04c90>]}
+[0m12:02:00.276801 [info ] [MainThread]: 
+[0m12:02:00.282189 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m12:02:00.292088 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108"
+[0m12:02:00.293757 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:02:01.258465 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108_my_dataset"
+[0m12:02:01.258833 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:02:02.024188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b9b71b7c-e930-49b4-a749-03bd45fdb1de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b48a9f11790>]}
+[0m12:02:02.024956 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:02:02.025402 [info ] [MainThread]: 
+[0m12:02:02.031032 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_forex
+[0m12:02:02.031400 [info ] [Thread-1  ]: 1 of 2 START sql table model my_dataset.final_table_forex_clean ................ [RUN]
+[0m12:02:02.032096 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_forex"
+[0m12:02:02.032305 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_forex
+[0m12:02:02.032539 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_forex
+[0m12:02:02.036643 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_forex"
+[0m12:02:02.038215 [debug] [Thread-1  ]: finished collecting timing info
+[0m12:02:02.038554 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_forex
+[0m12:02:02.059456 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:02:02.765977 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_forex_clean` because it is not replaceable
+[0m12:02:03.085629 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_forex"
+[0m12:02:03.086412 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_forex: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_forex"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_forex_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d-%H-%M', timestamp) AS ts_parsed,
+
+    SAFE_CAST(low AS FLOAT64)   AS exchange_rate,
+    SAFE_CAST(high AS FLOAT64)  AS high_price,
+    SAFE_CAST(open AS FLOAT64)  AS open_price,
+    SAFE_CAST(close AS FLOAT64) AS close_price,
+
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'forex'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed         AS local_timestamp,
+  date_parsed,      
+  exchange_rate,
+  high_price,
+  open_price,
+  close_price
+FROM final
+    );
+  
+[0m12:02:06.187796 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:fb89914d-27d3-4571-8697-d95f728f9e41:us-central1&page=queryresults
+[0m12:02:06.206081 [debug] [Thread-1  ]: finished collecting timing info
+[0m12:02:06.206752 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b9b71b7c-e930-49b4-a749-03bd45fdb1de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b48a9cb9dd0>]}
+[0m12:02:06.207175 [info ] [Thread-1  ]: 1 of 2 OK created sql table model my_dataset.final_table_forex_clean ........... [[32mCREATE TABLE (12.0 rows, 2.1 MB processed)[0m in 4.17s]
+[0m12:02:06.207727 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_forex
+[0m12:02:06.207982 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_stocks
+[0m12:02:06.208374 [info ] [Thread-1  ]: 2 of 2 START sql table model my_dataset.final_table_stocks_clean ............... [RUN]
+[0m12:02:06.209039 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_stocks"
+[0m12:02:06.209258 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_stocks
+[0m12:02:06.209481 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_stocks
+[0m12:02:06.213195 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_stocks"
+[0m12:02:06.213629 [debug] [Thread-1  ]: finished collecting timing info
+[0m12:02:06.213905 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_stocks
+[0m12:02:06.216027 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:02:06.876334 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_stocks_clean` because it is not replaceable
+[0m12:02:07.185585 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_stocks"
+[0m12:02:07.186226 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_stocks: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_stocks"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_stocks_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', timestamp) AS ts_parsed,
+    SAFE_CAST(open   AS FLOAT64) AS open_price,
+    SAFE_CAST(high   AS FLOAT64) AS high_price,
+    SAFE_CAST(low    AS FLOAT64) AS low_price,
+    SAFE_CAST(close  AS FLOAT64) AS close_price,
+    SAFE_CAST(volume AS INT64)   AS volume,
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'equity'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    open_price,
+    high_price,
+    low_price,
+    close_price,
+    volume,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,  -- For partitioning
+    open_price  AS open,
+    high_price  AS high,
+    low_price   AS low,
+    close_price AS close,
+    volume
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed           AS timestamp,
+  date_parsed,        
+  open,
+  high,
+  low,
+  close,
+  volume
+FROM final
+    );
+  
+[0m12:02:10.307185 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:958c3a3b-715d-449d-826b-26df154a3028:us-central1&page=queryresults
+[0m12:02:10.309333 [debug] [Thread-1  ]: finished collecting timing info
+[0m12:02:10.309994 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b9b71b7c-e930-49b4-a749-03bd45fdb1de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b48aa182dd0>]}
+[0m12:02:10.310412 [info ] [Thread-1  ]: 2 of 2 OK created sql table model my_dataset.final_table_stocks_clean .......... [[32mCREATE TABLE (494.0 rows, 2.4 MB processed)[0m in 4.10s]
+[0m12:02:10.310946 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_stocks
+[0m12:02:10.343526 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m12:02:10.344137 [info ] [MainThread]: 
+[0m12:02:10.344552 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 10.06 seconds (10.06s).
+[0m12:02:10.344950 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:02:10.345158 [debug] [MainThread]: Connection 'model.my_dbt_project.dedup_stocks' was properly closed.
+[0m12:02:10.351471 [info ] [MainThread]: 
+[0m12:02:10.351893 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:02:10.352361 [info ] [MainThread]: 
+[0m12:02:10.352725 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m12:02:10.353188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b48a9f11790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b48a9d24a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b48a9d24910>]}
+[0m12:02:10.353476 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-17 16:02:02.570170 | 3bd5d417-f7c4-4fb0-91e7-54eec3f9625b ==============================
+[0m16:02:02.570218 [info ] [MainThread]: Running with dbt=1.3.0
+[0m16:02:02.575440 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m16:02:02.575856 [debug] [MainThread]: Tracking: tracking
+[0m16:02:02.596240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7316291ae8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x731638f11350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x731638f11290>]}
+[0m16:02:02.702701 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:02:02.703239 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:02:02.713759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3bd5d417-f7c4-4fb0-91e7-54eec3f9625b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x731629118b10>]}
+[0m16:02:02.725181 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3bd5d417-f7c4-4fb0-91e7-54eec3f9625b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73162912cd50>]}
+[0m16:02:02.725713 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m16:02:02.726403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3bd5d417-f7c4-4fb0-91e7-54eec3f9625b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73162912cdd0>]}
+[0m16:02:02.728289 [info ] [MainThread]: 
+[0m16:02:02.729546 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m16:02:02.731207 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108"
+[0m16:02:02.731698 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:02:03.645881 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108_my_dataset"
+[0m16:02:03.646275 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:02:04.536288 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3bd5d417-f7c4-4fb0-91e7-54eec3f9625b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x731629025750>]}
+[0m16:02:04.537044 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:02:04.537491 [info ] [MainThread]: 
+[0m16:02:04.543092 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_forex
+[0m16:02:04.543430 [info ] [Thread-1  ]: 1 of 2 START sql table model my_dataset.final_table_forex_clean ................ [RUN]
+[0m16:02:04.544133 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_forex"
+[0m16:02:04.544344 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_forex
+[0m16:02:04.544580 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_forex
+[0m16:02:04.548731 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_forex"
+[0m16:02:04.549198 [debug] [Thread-1  ]: finished collecting timing info
+[0m16:02:04.549471 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_forex
+[0m16:02:04.567284 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m16:02:05.251673 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_forex_clean` because it is not replaceable
+[0m16:02:05.632710 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_forex"
+[0m16:02:05.633368 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_forex: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_forex"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_forex_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d-%H-%M', timestamp) AS ts_parsed,
+
+    SAFE_CAST(low AS FLOAT64)   AS exchange_rate,
+    SAFE_CAST(high AS FLOAT64)  AS high_price,
+    SAFE_CAST(open AS FLOAT64)  AS open_price,
+    SAFE_CAST(close AS FLOAT64) AS close_price,
+
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'forex'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed         AS local_timestamp,
+  date_parsed,      
+  exchange_rate,
+  high_price,
+  open_price,
+  close_price
+FROM final
+    );
+  
+[0m16:02:08.817260 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:e8bb66b0-d31d-4d57-b111-15fcf70659e9:us-central1&page=queryresults
+[0m16:02:08.835285 [debug] [Thread-1  ]: finished collecting timing info
+[0m16:02:08.835908 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3bd5d417-f7c4-4fb0-91e7-54eec3f9625b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73162919e2d0>]}
+[0m16:02:08.836320 [info ] [Thread-1  ]: 1 of 2 OK created sql table model my_dataset.final_table_forex_clean ........... [[32mCREATE TABLE (12.0 rows, 2.3 MB processed)[0m in 4.29s]
+[0m16:02:08.836854 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_forex
+[0m16:02:08.837134 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_stocks
+[0m16:02:08.837491 [info ] [Thread-1  ]: 2 of 2 START sql table model my_dataset.final_table_stocks_clean ............... [RUN]
+[0m16:02:08.838177 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_stocks"
+[0m16:02:08.838386 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_stocks
+[0m16:02:08.838611 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_stocks
+[0m16:02:08.842299 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_stocks"
+[0m16:02:08.842732 [debug] [Thread-1  ]: finished collecting timing info
+[0m16:02:08.843015 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_stocks
+[0m16:02:08.845179 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m16:02:09.580981 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_stocks_clean` because it is not replaceable
+[0m16:02:09.884306 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_stocks"
+[0m16:02:09.884900 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_stocks: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_stocks"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_stocks_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', timestamp) AS ts_parsed,
+    SAFE_CAST(open   AS FLOAT64) AS open_price,
+    SAFE_CAST(high   AS FLOAT64) AS high_price,
+    SAFE_CAST(low    AS FLOAT64) AS low_price,
+    SAFE_CAST(close  AS FLOAT64) AS close_price,
+    SAFE_CAST(volume AS INT64)   AS volume,
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'equity'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    open_price,
+    high_price,
+    low_price,
+    close_price,
+    volume,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,  -- For partitioning
+    open_price  AS open,
+    high_price  AS high,
+    low_price   AS low,
+    close_price AS close,
+    volume
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed           AS timestamp,
+  date_parsed,        
+  open,
+  high,
+  low,
+  close,
+  volume
+FROM final
+    );
+  
+[0m16:02:12.763541 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:f7633821-6cf2-4102-a8cd-6d47c6d3ac54:us-central1&page=queryresults
+[0m16:02:12.765482 [debug] [Thread-1  ]: finished collecting timing info
+[0m16:02:12.766100 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3bd5d417-f7c4-4fb0-91e7-54eec3f9625b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x731628e80d50>]}
+[0m16:02:12.766489 [info ] [Thread-1  ]: 2 of 2 OK created sql table model my_dataset.final_table_stocks_clean .......... [[32mCREATE TABLE (494.0 rows, 2.5 MB processed)[0m in 3.93s]
+[0m16:02:12.767019 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_stocks
+[0m16:02:12.815789 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m16:02:12.816961 [info ] [MainThread]: 
+[0m16:02:12.817696 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 10.09 seconds (10.09s).
+[0m16:02:12.818367 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:02:12.818731 [debug] [MainThread]: Connection 'model.my_dbt_project.dedup_stocks' was properly closed.
+[0m16:02:12.830637 [info ] [MainThread]: 
+[0m16:02:12.831955 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:02:12.832675 [info ] [MainThread]: 
+[0m16:02:12.833261 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m16:02:12.833977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73162a4282d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x731628ee2d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x731628eda310>]}
+[0m16:02:12.834412 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2025-04-17 22:14:01.931028 | 1cd5aaee-b2c1-45f8-b5d4-9e4febf9f1f2 ==============================
+[0m22:14:01.931071 [info ] [MainThread]: Running with dbt=1.3.0
+[0m22:14:01.953183 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m22:14:01.953514 [debug] [MainThread]: Tracking: tracking
+[0m22:14:01.968135 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78399b83ef90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78399b83edd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78399b83e990>]}
+[0m22:14:02.127552 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:14:02.128121 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:14:02.138940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1cd5aaee-b2c1-45f8-b5d4-9e4febf9f1f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7839a0b10d90>]}
+[0m22:14:02.169765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1cd5aaee-b2c1-45f8-b5d4-9e4febf9f1f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78399b7e2050>]}
+[0m22:14:02.170831 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+[0m22:14:02.171301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1cd5aaee-b2c1-45f8-b5d4-9e4febf9f1f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78399b7e2510>]}
+[0m22:14:02.172894 [info ] [MainThread]: 
+[0m22:14:02.173902 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m22:14:02.175456 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108"
+[0m22:14:02.175831 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:14:03.014425 [debug] [ThreadPool]: Acquiring new bigquery connection "list_finflow-455108_my_dataset"
+[0m22:14:03.014812 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:14:03.730390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1cd5aaee-b2c1-45f8-b5d4-9e4febf9f1f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78399b7e2150>]}
+[0m22:14:03.731401 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:14:03.732824 [info ] [MainThread]: 
+[0m22:14:03.745929 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_forex
+[0m22:14:03.746549 [info ] [Thread-1  ]: 1 of 2 START sql table model my_dataset.final_table_forex_clean ................ [RUN]
+[0m22:14:03.748131 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_forex"
+[0m22:14:03.748968 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_forex
+[0m22:14:03.749451 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_forex
+[0m22:14:03.755094 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_forex"
+[0m22:14:03.755543 [debug] [Thread-1  ]: finished collecting timing info
+[0m22:14:03.755839 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_forex
+[0m22:14:03.777760 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:14:04.495179 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_forex_clean` because it is not replaceable
+[0m22:14:04.928682 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_forex"
+[0m22:14:04.929283 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_forex: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_forex"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_forex_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d-%H-%M', timestamp) AS ts_parsed,
+
+    SAFE_CAST(low AS FLOAT64)   AS exchange_rate,
+    SAFE_CAST(high AS FLOAT64)  AS high_price,
+    SAFE_CAST(open AS FLOAT64)  AS open_price,
+    SAFE_CAST(close AS FLOAT64) AS close_price,
+
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'forex'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,
+    exchange_rate,
+    high_price,
+    open_price,
+    close_price
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed         AS local_timestamp,
+  date_parsed,      
+  exchange_rate,
+  high_price,
+  open_price,
+  close_price
+FROM final
+    );
+  
+[0m22:14:07.740549 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:764f1b4d-c51c-445d-85f0-c3c94a20dda8:us-central1&page=queryresults
+[0m22:14:07.758757 [debug] [Thread-1  ]: finished collecting timing info
+[0m22:14:07.759380 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1cd5aaee-b2c1-45f8-b5d4-9e4febf9f1f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78399b762390>]}
+[0m22:14:07.759812 [info ] [Thread-1  ]: 1 of 2 OK created sql table model my_dataset.final_table_forex_clean ........... [[32mCREATE TABLE (12.0 rows, 2.4 MB processed)[0m in 4.01s]
+[0m22:14:07.760352 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_forex
+[0m22:14:07.760615 [debug] [Thread-1  ]: Began running node model.my_dbt_project.dedup_stocks
+[0m22:14:07.760998 [info ] [Thread-1  ]: 2 of 2 START sql table model my_dataset.final_table_stocks_clean ............... [RUN]
+[0m22:14:07.761668 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.my_dbt_project.dedup_stocks"
+[0m22:14:07.761887 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.dedup_stocks
+[0m22:14:07.762108 [debug] [Thread-1  ]: Compiling model.my_dbt_project.dedup_stocks
+[0m22:14:07.765704 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.dedup_stocks"
+[0m22:14:07.766151 [debug] [Thread-1  ]: finished collecting timing info
+[0m22:14:07.766424 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.dedup_stocks
+[0m22:14:07.768492 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:14:08.400002 [debug] [Thread-1  ]: Hard refreshing `finflow-455108`.`my_dataset`.`final_table_stocks_clean` because it is not replaceable
+[0m22:14:08.672514 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.dedup_stocks"
+[0m22:14:08.673067 [debug] [Thread-1  ]: On model.my_dbt_project.dedup_stocks: /* {"app": "dbt", "dbt_version": "1.3.0", "profile_name": "my_bigquery_profile", "target_name": "dev", "node_id": "model.my_dbt_project.dedup_stocks"} */
+
+  
+    
+
+    create or replace table `finflow-455108`.`my_dataset`.`final_table_stocks_clean`
+    
+    
+    OPTIONS()
+    as (
+      
+
+WITH casted AS (
+  SELECT
+    symbol,
+    SAFE.PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', timestamp) AS ts_parsed,
+    SAFE_CAST(open   AS FLOAT64) AS open_price,
+    SAFE_CAST(high   AS FLOAT64) AS high_price,
+    SAFE_CAST(low    AS FLOAT64) AS low_price,
+    SAFE_CAST(close  AS FLOAT64) AS close_price,
+    SAFE_CAST(volume AS INT64)   AS volume,
+    data_type
+  FROM `finflow-455108`.`my_dataset`.`bigquery_data`
+  WHERE data_type = 'equity'
+),
+ranked AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    open_price,
+    high_price,
+    low_price,
+    close_price,
+    volume,
+    ROW_NUMBER() OVER (
+      PARTITION BY symbol, ts_parsed
+      ORDER BY ts_parsed
+    ) AS rn
+  FROM casted
+),
+final AS (
+  SELECT
+    symbol,
+    ts_parsed,
+    DATE(ts_parsed) AS date_parsed,  -- For partitioning
+    open_price  AS open,
+    high_price  AS high,
+    low_price   AS low,
+    close_price AS close,
+    volume
+  FROM ranked
+  WHERE rn = 1
+)
+
+SELECT
+  symbol,
+  ts_parsed           AS timestamp,
+  date_parsed,        
+  open,
+  high,
+  low,
+  close,
+  volume
+FROM final
+    );
+  
+[0m22:14:11.331160 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=finflow-455108&j=bq:ff93a6c5-7d13-41e5-acac-4d784a61e5a9:us-central1&page=queryresults
+[0m22:14:11.342903 [debug] [Thread-1  ]: finished collecting timing info
+[0m22:14:11.347035 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1cd5aaee-b2c1-45f8-b5d4-9e4febf9f1f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78399b771190>]}
+[0m22:14:11.349512 [info ] [Thread-1  ]: 2 of 2 OK created sql table model my_dataset.final_table_stocks_clean .......... [[32mCREATE TABLE (494.0 rows, 2.7 MB processed)[0m in 3.59s]
+[0m22:14:11.352094 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.dedup_stocks
+[0m22:14:11.430229 [debug] [MainThread]: Acquiring new bigquery connection "master"
+[0m22:14:11.432387 [info ] [MainThread]: 
+[0m22:14:11.433830 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 9.26 seconds (9.26s).
+[0m22:14:11.434476 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:14:11.435689 [debug] [MainThread]: Connection 'model.my_dbt_project.dedup_stocks' was properly closed.
+[0m22:14:11.452044 [info ] [MainThread]: 
+[0m22:14:11.453809 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:14:11.454515 [info ] [MainThread]: 
+[0m22:14:11.455145 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m22:14:11.456872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78399b83d2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78399b6e6a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78399b769e10>]}
+[0m22:14:11.457344 [debug] [MainThread]: Flushing usage events
